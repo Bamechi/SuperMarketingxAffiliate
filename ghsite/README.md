@@ -1,0 +1,36 @@
+# Supermind — Creator Network & Affiliate Program
+
+Internal strategy site for the Supermind creator collaboration and affiliate program.
+
+**Live:** https://super-marketingx-affiliate.vercel.app/
+**Full brand system:** https://superminddeck.vercel.app/#p-bible
+
+## Contents
+- `index.html` — the deck (11 tabs)
+- `docs-payload.js` — all twelve PDFs base64-encoded, powering the in-page download buttons
+- `docs/` — the same twelve PDFs as loose files
+- `brand/` — the SUPERMIND wordmark PNG pack v2 (transparent colorways, web sizes, favicons, master source)
+- `favicon.png`
+
+## Brand usage — read before touching the mark
+The wordmark is **supplied artwork**. Place it; never retype, stretch, outline, rotate, recolour or screenshot it.
+Minimum 160 px wide on screen, clear space of at least 0.5× the mark height each side.
+**Status: pending proof** — these rasters are for digital, decks, social and web only. Nothing physical (print, packaging, foil, engraving, embroidery, signage) ships until the founder-approved vector is stored.
+
+## Documents
+| Code | Title |
+|---|---|
+| World Bible V2 | The Supermind World Bible |
+| SM-AFF-00 | Source of Truth |
+| SM-AFF-01 | Internal Team Plan |
+| SM-AFF-02 | Affiliate Handbook |
+| SM-AFF-03 | Coordinator SOP |
+| SM-AFF-04 | Platform Playbook |
+| SM-AFF-05 | Creator Collaborations |
+| SM-AFF-06 | Newsletter Guide |
+| SM-AFF-07 | AI UGC Guide |
+| SM-AFF-08 | Master To-Do |
+| SM-AFF-09 | The Calendar |
+| SM-AFF-10 | Prompts & Challenges |
+
+Owner: B. Amechi · September 2026 · Internal · v5.1
