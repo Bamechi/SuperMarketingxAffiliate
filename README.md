@@ -1,27 +1,11 @@
-# Supermind — Creator Network & Affiliate Program
+# Supermind Creator Network · v6.0
 
-Internal strategy site for the Supermind creator collaboration and affiliate program.
+Live: https://super-marketingx-affiliate.vercel.app/
 
-**Live site:** enable GitHub Pages on the `main` branch (root) in Settings → Pages.
+- `index.html` — public affiliate site plus the encrypted team area (Team access button, passcode held by B. Amechi)
+- `downloads/affiliate/` — SM-CN-01 to SM-CN-07, public
+- `downloads/team-e1a5444ffeb0/` — internal library. Run `copy-team-files.command` locally to fill it
+- `brand/` — wordmark pack (digital use only, pending proof for print)
+- `vercel.json` — keeps the team folder out of search engines
 
-## Contents
-- `index.html` — the deck (11 tabs)
-- `docs-payload.js` — the eleven PDFs, base64-encoded, powering the in-page download buttons
-- `docs/` — the same eleven PDFs as loose files
-
-## Documents
-| Code | Title |
-|---|---|
-| SM-AFF-00 | Source of Truth |
-| SM-AFF-01 | Internal Team Plan |
-| SM-AFF-02 | Affiliate Handbook |
-| SM-AFF-03 | Coordinator SOP |
-| SM-AFF-04 | Platform Playbook |
-| SM-AFF-05 | Creator Collaborations |
-| SM-AFF-06 | Newsletter Guide |
-| SM-AFF-07 | AI UGC Guide |
-| SM-AFF-08 | Master To-Do |
-| SM-AFF-09 | The Calendar |
-| SM-AFF-10 | Prompts & Challenges |
-
-Owner: B. Amechi · September 2026 · Internal
+Keep this repo PRIVATE. A public repo exposes every internal file regardless of the passcode.

@@ -1,1356 +1,569 @@
-<title>Supermind Creator Network</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=Montserrat:wght@400;500;600;700&display=swap">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Supermind Creator Network · Become an affiliate</title>
+<meta name="description" content="Join the Supermind Creator Network. Free to join, commission from 10% to 30%, a tier ladder that moves the week you earn it, and everything you need to post on day one.">
+<meta property="og:title" content="Supermind Creator Network">
+<meta property="og:description" content="Clarity is the luxury. Come sell some. Free to join.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="brand/favicon/SUPERMIND_favicon_180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-color-scheme:light;
---paper:#F4F1EB;--card:#FFFFFF;--wash:#EBE5DB;
---ink:#17100E;--ink2:#463A36;--ink3:#6B5F5A;
---cherry:#55100D;--cherry2:#7A2119;--cherrywash:#F7ECEA;
---gold:#C9A227;--goldink:#8A6A15;--goldwash:#FAF3E0;
---red:#DD0200;--redwash:#FCEDEC;
---night:#17100E;--night2:#241715;--nightink:#F4F1EB;
---rule:#DFD8CE;--rule2:#C6BBAE;
---serif:'Instrument Serif',Georgia,'Times New Roman',serif;
---head:'Bebas Neue','Arial Narrow',sans-serif;
---body:'Montserrat','Segoe UI',system-ui,sans-serif;
+  --ivory:#F1EEE7; --ivory-2:#E8E3D9; --bean:#1A0706; --cherry:#55100D; --red:#DD0200;
+  --grey:#D9D9D9; --black:#111111; --smoke:#394439; --living:#536B45; --gold:#B8913A;
+  --line:#D6CFC3; --muted:#6B5A52;
+  --serif:"Instrument Serif", Georgia, "Times New Roman", serif;
+  --sans:"Montserrat", "Helvetica Neue", Arial, sans-serif;
+  --wrap:1160px;
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--paper);color:var(--ink);font-family:var(--body);font-weight:400;
-font-size:17px;line-height:1.68;-webkit-font-smoothing:antialiased}
-h1{font-family:var(--serif);font-weight:400;font-size:clamp(46px,6.6vw,84px);line-height:1.03;
-letter-spacing:-.012em;text-wrap:balance;font-variant-numeric:lining-nums;color:var(--ink)}
-h2{font-family:var(--serif);font-weight:400;font-size:clamp(30px,3.9vw,46px);line-height:1.12;
-letter-spacing:-.008em;margin-bottom:10px;text-wrap:balance;font-variant-numeric:lining-nums;color:var(--ink)}
-h3{font-family:var(--head);font-weight:400;font-size:22px;letter-spacing:.05em;margin-bottom:7px;color:var(--cherry)}
-h4{font-family:var(--head);font-weight:400;font-size:15px;letter-spacing:.17em;text-transform:uppercase;
-margin-bottom:12px;color:var(--cherry)}
-p{font-size:16.5px;line-height:1.74;color:var(--ink2);max-width:72ch;margin-bottom:12px}
-.lede{font-size:20px;line-height:1.6;color:var(--ink);font-weight:400;max-width:70ch}
-b,strong{color:var(--ink);font-weight:600}
-.kicker{font-family:var(--head);font-weight:400;font-size:14px;letter-spacing:.24em;
-text-transform:uppercase;color:var(--cherry);margin-bottom:14px}
-.kicker .sig{color:var(--red)}
-.rule{height:3px;width:62px;background:var(--cherry);margin:18px 0 26px;border-radius:2px}
-.rule.red{background:var(--red)}
-.grid{display:grid;gap:16px;margin-top:24px}
-.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}
-.g4{grid-template-columns:repeat(4,1fr)}.g5{grid-template-columns:repeat(5,1fr)}
-.card{background:var(--card);border:1px solid var(--rule);border-top:3px solid var(--cherry);
-padding:20px 22px;border-radius:0 0 3px 3px;box-shadow:0 1px 2px rgba(23,16,14,.04)}
-.card.plain{border-top:1px solid var(--rule);box-shadow:none}
-.card p{font-size:15px;line-height:1.62;margin-bottom:0;color:var(--ink2)}
-.card .n{font-family:var(--head);font-size:30px;color:var(--cherry);display:block;margin-bottom:4px;line-height:1}
-.tablewrap{overflow-x:auto;margin-top:18px;border:1px solid var(--rule);border-radius:3px;background:var(--card)}
-table{width:100%;border-collapse:collapse;font-size:15px;min-width:620px}
-th{font-family:var(--head);font-weight:400;font-size:14px;letter-spacing:.13em;text-transform:uppercase;
-color:var(--nightink);text-align:left;padding:12px 16px;background:var(--cherry);white-space:nowrap}
-td{padding:14px 16px;border-bottom:1px solid var(--rule);color:var(--ink2);vertical-align:top;line-height:1.62}
-tr:last-child td{border-bottom:none}
-td strong{color:var(--ink);font-weight:600}
-tr.hl td{background:var(--goldwash)}
-.mono{font-variant-numeric:tabular-nums lining-nums;white-space:nowrap}
-ul.clean{list-style:none;margin-top:14px}
-ul.clean li{font-size:16.5px;line-height:1.72;color:var(--ink2);padding-left:22px;position:relative;
-margin-bottom:13px;max-width:72ch}
-ul.clean li::before{content:"";position:absolute;left:0;top:13px;width:10px;height:2px;background:var(--gold)}
-ol.steps{margin:14px 0 0;list-style:none;counter-reset:st}
-ol.steps li{font-size:16.5px;line-height:1.72;color:var(--ink2);margin-bottom:15px;padding-left:40px;
-position:relative;counter-increment:st;max-width:72ch}
-ol.steps li::before{content:counter(st,decimal-leading-zero);position:absolute;left:0;top:2px;
-font-family:var(--head);color:var(--cherry);font-size:20px;line-height:1.1}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
-.stat{border-left:3px solid var(--cherry);padding-left:18px}
-.stat .big{font-family:var(--head);font-size:clamp(40px,4.4vw,58px);line-height:.98;color:var(--ink);
-font-variant-numeric:lining-nums}
-.stat .lbl{font-family:var(--head);font-size:13px;letter-spacing:.13em;text-transform:uppercase;
-color:var(--ink3);margin-top:6px;line-height:1.32}
-.footnote{font-size:14.5px;color:var(--ink3);margin-top:20px;line-height:1.7;max-width:88ch}
-.goldbox{border:1px solid #E5D6A4;background:var(--goldwash);padding:22px 26px;margin:22px 0;border-radius:3px}
-.goldbox p{font-size:16.5px;margin:0 0 10px;color:var(--ink);max-width:none}
-.goldbox p:last-child{margin-bottom:0}
-.goldbox h4{color:var(--goldink)}
-.callout{border-left:4px solid var(--red);background:var(--redwash);padding:20px 24px;margin:22px 0;border-radius:0 3px 3px 0}
-.callout p{font-size:16px;margin:0 0 10px;color:var(--ink);max-width:none}
-.callout p:last-child{margin-bottom:0}
-.callout h4{color:var(--red)}
-.quote{font-family:var(--serif);font-size:21px;line-height:1.44;color:var(--ink);max-width:64ch;
-font-variant-numeric:lining-nums}
-header.top{position:sticky;top:0;z-index:50;background:var(--night);border-bottom:3px solid var(--cherry)}
-.brandrow{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 5vw 12px;flex-wrap:wrap}
-.wordmark{font-family:var(--head);letter-spacing:.42em;font-size:21px;color:var(--nightink)}
-.brandrow .tag{font-family:var(--head);font-size:13px;letter-spacing:.14em;text-transform:uppercase;
-color:rgba(244,241,235,.6)}
-nav.tabs{display:flex;gap:2px;padding:0 5vw;overflow-x:auto;scrollbar-width:none}
-nav.tabs::-webkit-scrollbar{display:none}
-nav.tabs button{appearance:none;background:none;border:none;border-bottom:3px solid transparent;
-color:rgba(244,241,235,.62);font-family:var(--head);font-size:16px;letter-spacing:.1em;
-text-transform:uppercase;padding:11px 15px 9px;cursor:pointer;white-space:nowrap;transition:color .15s}
-nav.tabs button:hover{color:var(--nightink)}
-nav.tabs button:focus-visible{outline:2px solid var(--gold);outline-offset:-3px}
-nav.tabs button.on{color:var(--nightink);border-bottom-color:var(--red)}
-main{min-height:70vh;background:var(--paper)}
-section.pane{padding:58px 5vw 90px;max-width:1180px;margin:0 auto}
-.sec{margin-top:54px;padding-top:8px}
-.heroline{height:5px;width:min(470px,72%);
-background:linear-gradient(90deg,var(--cherry) 0 58%,var(--gold) 58% 93%,var(--red) 93% 100%);
-margin:28px 0;border-radius:2px}
-footer{background:var(--night);color:rgba(244,241,235,.6);padding:30px 5vw;font-family:var(--head);
-font-size:14px;letter-spacing:.12em;text-transform:uppercase;display:flex;justify-content:space-between;
-gap:16px;flex-wrap:wrap}
-.docgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(272px,1fr));gap:16px;margin-top:24px}
-.doccard{background:var(--card);border:1px solid var(--rule);padding:20px 22px;border-top:3px solid var(--cherry);
-border-radius:0 0 3px 3px;box-shadow:0 1px 2px rgba(23,16,14,.04)}
-.doccard .code{font-family:var(--head);font-size:19px;letter-spacing:.12em;color:var(--cherry);display:block;margin-bottom:6px}
-.doccard strong{font-size:16.5px;display:block;margin-bottom:6px;color:var(--ink)}
-.doccard p{font-size:14.5px;margin:0;color:var(--ink2);max-width:none}
-@media (max-width:920px){.two,.g3,.g4,.g5{grid-template-columns:1fr 1fr}.g2{grid-template-columns:1fr}.two{gap:32px}}
-@media (max-width:620px){.two,.g2,.g3,.g4,.g5{grid-template-columns:1fr}section.pane{padding:40px 6vw 64px}body{font-size:16px}}
-.pane{opacity:1}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--ivory);color:var(--bean);font-family:var(--sans);font-size:16px;line-height:1.65}
+img{max-width:100%;display:block}
+a{color:var(--cherry)}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+.skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:16px;background:#fff;padding:8px 12px;z-index:99}
 
-button.dl,button.dl-all{appearance:none;font-family:var(--head);font-size:15px;letter-spacing:.1em;
-text-transform:uppercase;background:var(--cherry);color:var(--nightink);border:none;padding:9px 16px;
-border-radius:2px;cursor:pointer;margin-top:14px;transition:background .15s;align-self:flex-start}
-button.dl:hover,button.dl-all:hover{background:var(--cherry2)}
-button.dl:focus-visible,button.dl-all:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
-button.dl-all{font-size:17px;padding:13px 24px;margin-top:0}
-.dl-note{font-size:14px;color:var(--ink3);margin-left:14px}
-.doccard{display:flex;flex-direction:column}
-.doccard p{flex:1}
+/* header */
+.site-head{position:sticky;top:0;z-index:40;background:rgba(26,7,6,.97);border-bottom:1px solid #3a1c18}
+.site-head .wrap{display:flex;align-items:center;gap:28px;height:64px}
+.site-head .mark img{width:168px;height:auto}
+.site-head nav{display:flex;gap:22px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.site-head nav::-webkit-scrollbar{display:none}
+.site-head nav a{color:#D9D2C6;text-decoration:none;font-size:13.5px;font-weight:500;white-space:nowrap;padding:6px 0;border-bottom:1px solid transparent}
+.site-head nav a:hover{color:#fff;border-bottom-color:var(--gold)}
+.team-btn{background:none;border:1px solid #6d4a44;color:#EDE6DA;font:600 12.5px var(--sans);padding:8px 14px;border-radius:2px;cursor:pointer;white-space:nowrap}
+.team-btn:hover{border-color:var(--gold);color:#fff}
+
+/* hero */
+.hero{background:var(--bean);color:var(--ivory);padding:96px 0 88px;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:end}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(54px,8.2vw,112px);line-height:.96;margin:0 0 28px;letter-spacing:-.01em}
+.hero p.lede{font-size:18px;line-height:1.6;color:#DCD4C8;max-width:560px;margin:0 0 34px}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-block;text-decoration:none;font:600 15px var(--sans);padding:15px 24px;border-radius:2px;border:1px solid transparent;cursor:pointer}
+.btn-primary{background:var(--ivory);color:var(--bean)}
+.btn-primary:hover{background:#fff}
+.btn-ghost{border-color:#6d4a44;color:var(--ivory);background:none}
+.btn-ghost:hover{border-color:var(--gold)}
+.btn-cherry{background:var(--cherry);color:var(--ivory)}
+.btn-cherry:hover{background:#6c1611}
+.hero-facts{border-left:1px solid #4a2a26;padding-left:32px}
+.hero-facts div{padding:14px 0;border-bottom:1px solid #3a1c18}
+.hero-facts div:last-child{border-bottom:0}
+.hero-facts strong{display:block;font-family:var(--serif);font-weight:400;font-size:38px;line-height:1.05;color:#fff}
+.hero-facts span{font-size:13.5px;color:#BFB4A6}
+.hero-rule{display:flex;height:4px;width:220px;margin:0 0 30px}
+.hero-rule i{flex:3;background:var(--cherry)}.hero-rule b{flex:2;background:var(--gold)}.hero-rule u{flex:.6;background:var(--red)}
+
+/* sections */
+section.block{padding:96px 0;border-bottom:1px solid var(--line)}
+section.alt{background:var(--ivory-2)}
+.sec-head{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;margin-bottom:48px;align-items:end}
+.sec-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(40px,5vw,64px);line-height:1;margin:0}
+.sec-head p{margin:0;font-size:17px;color:#3b2622;max-width:560px}
+h3{font-family:var(--serif);font-weight:400;font-size:28px;line-height:1.15;margin:0 0 10px}
+.small{font-size:13.5px;color:var(--muted)}
+
+/* steps */
+.steps{border-top:2px solid var(--bean)}
+.steps ol{display:grid;grid-template-columns:repeat(4,1fr)}
+.steps li{list-style:none;padding:26px 24px 8px 0;border-right:1px solid var(--line);margin-right:24px}
+.steps li:last-child{border-right:0;margin-right:0}
+.steps ol{padding:0;margin:0}
+.steps .n{font-family:var(--serif);font-size:44px;color:var(--cherry);line-height:1}
+.steps h3{font-size:24px;margin-top:10px}
+.steps p{margin:0;font-size:15px}
+
+/* ladder */
+.ladder{display:grid;grid-template-columns:repeat(4,1fr);align-items:end;gap:0;margin:8px 0 40px}
+.rung{background:var(--bean);color:var(--ivory);padding:22px 22px 24px;border-right:1px solid #3a1c18}
+.rung:nth-child(1){height:260px;background:#3b1a16}
+.rung:nth-child(2){height:310px;background:#4a1511}
+.rung:nth-child(3){height:360px;background:var(--cherry)}
+.rung:nth-child(4){height:410px;background:var(--bean);border-right:0}
+.rung .tier{font-weight:600;font-size:14px;color:#E9DCC5}
+.rung .pct{font-family:var(--serif);font-size:58px;line-height:1;margin:10px 0 2px;color:#fff}
+.rung .pct small{font-size:22px;color:#D6C6AE}
+.rung .how{font-size:13.5px;color:#D6CCBE;margin-top:10px}
+.rung .gets{font-size:13.5px;color:#fff;border-top:1px solid rgba(255,255,255,.18);padding-top:10px;margin-top:12px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.panel{border-top:2px solid var(--cherry);padding-top:18px}
+.panel p{margin:0 0 10px;font-size:15.5px}
+
+/* tables */
+.tbl{width:100%;border-collapse:collapse;font-size:15px;margin:6px 0 10px}
+.tbl th{text-align:left;background:var(--cherry);color:var(--ivory);font-weight:600;font-size:13px;padding:11px 14px}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl tr:nth-child(even) td{background:rgba(255,255,255,.35)}
+.scroll{overflow-x:auto}
+
+/* platforms */
+.plat{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:2px solid var(--bean)}
+.plat article{padding:30px 32px 30px 0;border-bottom:1px solid var(--line)}
+.plat article:nth-child(odd){border-right:1px solid var(--line)}
+.plat article:nth-child(even){padding-left:32px;padding-right:0}
+.plat .addr{font-weight:600;color:var(--cherry);text-decoration:none}
+.plat ol{padding-left:20px;margin:10px 0 0;font-size:15px}
+.plat li{margin-bottom:4px}
+
+/* tiktok */
+.tiktok{background:var(--black);color:var(--ivory)}
+.tiktok .sec-head p{color:#CFC7BB}
+.tiktok .tbl th{background:#2a2a2a}
+.tiktok .tbl td{border-bottom-color:#333}
+.tiktok .tbl tr:nth-child(even) td{background:#181818}
+.tiktok ol{padding-left:22px}
+.tiktok li{margin-bottom:8px}
+.tiktok strong{color:#fff}
+.tiktok .note{border-left:3px solid var(--red);padding:12px 16px;background:#1a1a1a;font-size:14.5px;margin-top:18px}
+
+/* hooks + rules */
+.hooklist{margin:0;padding:0;list-style:none;border-top:1px solid var(--line)}
+.hooklist li{font-family:var(--serif);font-size:25px;line-height:1.25;padding:14px 0;border-bottom:1px solid var(--line)}
+.rules4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-bottom:40px}
+.rules4 div{border-top:2px solid var(--cherry);padding-top:14px}
+.rules4 strong{font-family:var(--serif);font-weight:400;font-size:26px;display:block;line-height:1.1;margin-bottom:6px}
+.rules4 p{margin:0;font-size:15px}
+
+/* downloads */
+.dl{display:grid;grid-template-columns:repeat(2,1fr);border-top:2px solid var(--bean)}
+.dl a{display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;text-decoration:none;color:var(--bean);padding:20px 24px 20px 0;border-bottom:1px solid var(--line)}
+.dl a:nth-child(odd){border-right:1px solid var(--line)}
+.dl a:nth-child(even){padding-left:24px}
+.dl a:hover .t{color:var(--cherry);text-decoration:underline}
+.dl .code{font-size:12px;font-weight:600;color:var(--red);min-width:74px}
+.dl .t{font-family:var(--serif);font-size:24px;line-height:1.1}
+.dl .d{display:block;font-family:var(--sans);font-size:13.5px;color:var(--muted);margin-top:4px}
+.dl .f{font-size:12px;font-weight:600;color:var(--muted)}
+
+/* faq */
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:18px 40px 18px 0;font-family:var(--serif);font-size:23px;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";position:absolute;right:4px;top:14px;font-family:var(--sans);font-size:22px;color:var(--cherry)}
+.faq details[open] summary:after{content:"–"}
+.faq details p{margin:0 0 20px;max-width:760px}
+
+/* footer */
+footer{background:var(--bean);color:#CFC6BA;padding:56px 0 40px;font-size:14px}
+footer .wrap{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px}
+footer img{width:190px;margin-bottom:16px}
+footer a{color:#EDE6DA;text-decoration:none}
+footer a:hover{text-decoration:underline}
+footer ul{list-style:none;margin:0;padding:0}footer li{margin-bottom:8px}
+footer .fine{grid-column:1/-1;border-top:1px solid #3a1c18;padding-top:20px;font-size:12.5px;color:#A89C8E}
+
+/* team gate */
+.gate{position:fixed;inset:0;background:rgba(17,17,17,.78);display:none;align-items:center;justify-content:center;z-index:80;padding:20px}
+.gate.open{display:flex}
+.gate form{background:var(--ivory);max-width:420px;width:100%;padding:34px;border-top:4px solid var(--smoke)}
+.gate h2{font-family:var(--serif);font-weight:400;font-size:34px;margin:0 0 8px}
+.gate p{margin:0 0 18px;font-size:15px}
+.gate label{font-size:13px;font-weight:600;display:block;margin-bottom:6px}
+.gate input{width:100%;padding:13px 14px;font:16px var(--sans);border:1px solid #bfb5a6;background:#fff;border-radius:2px}
+.gate .row{display:flex;gap:10px;margin-top:16px}
+.gate .err{color:var(--red);font-size:14px;min-height:20px;margin-top:10px}
+#teamView{display:none}
+body.team-on #publicView{display:none}
+body.team-on #teamView{display:block}
+
+/* team view */
+.team-bar{background:var(--smoke);color:var(--ivory);padding:54px 0 46px}
+.team-bar h1{font-family:var(--serif);font-weight:400;font-size:clamp(44px,6vw,76px);line-height:1;margin:0 0 14px}
+.team-bar p{max-width:720px;color:#DCE0D6;margin:0 0 22px;font-size:17px}
+.team-bar .btn-ghost{border-color:#7c8a7b}
+.tnav{position:sticky;top:64px;background:var(--ivory);border-bottom:1px solid var(--line);z-index:30}
+.tnav .wrap{display:flex;gap:22px;overflow-x:auto;height:50px;align-items:center}
+.tnav a{font-size:13.5px;font-weight:600;color:var(--smoke);text-decoration:none;white-space:nowrap}
+.tnav a:hover{color:var(--cherry)}
+.tsec{padding:64px 0;border-bottom:1px solid var(--line)}
+.tsec h2{font-family:var(--serif);font-weight:400;font-size:44px;margin:0 0 20px;line-height:1}
+.lib-group{margin-bottom:36px}
+.lib-group h3{font-size:26px;border-bottom:2px solid var(--smoke);padding-bottom:8px;margin-bottom:0}
+.lib a.row{display:grid;grid-template-columns:1.1fr 1.4fr auto;gap:18px;padding:13px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--bean);align-items:baseline}
+.lib a.row:hover .nm{color:var(--cherry);text-decoration:underline}
+.lib .nm{font-weight:600;font-size:15px}
+.lib .fn{display:block;font-weight:400;font-size:12px;color:var(--muted);word-break:break-all}
+.lib .wh{font-size:14.5px;color:#3b2622}
+.lib .st{font-size:12px;font-weight:600;color:var(--living)}
+.lib .st.miss{color:var(--red)}
+.ol-read{padding-left:22px}.ol-read li{margin-bottom:6px}
+
+@media (max-width:900px){
+  .steps ol{grid-template-columns:1fr 1fr}
+  .hero .wrap,.sec-head,.two,.three{grid-template-columns:1fr;gap:28px}
+  .hero-facts{border-left:0;padding-left:0;border-top:1px solid #4a2a26}
+  .steps li{border-right:0;margin-right:0;border-bottom:1px solid var(--line);padding-bottom:20px}
+  .ladder{grid-template-columns:1fr 1fr}
+  .rung{height:auto!important}
+  .plat,.dl{grid-template-columns:1fr}
+  .plat article,.plat article:nth-child(even),.dl a,.dl a:nth-child(even){padding-left:0;padding-right:0;border-right:0}
+  .rules4{grid-template-columns:1fr 1fr}
+  footer .wrap{grid-template-columns:1fr}
+  .lib a.row{grid-template-columns:1fr}
+  section.block{padding:72px 0}
+}
+@media (max-width:560px){
+  .wrap{padding:0 20px}
+  .site-head nav{display:none}
+  .steps ol,.ladder,.rules4{grid-template-columns:1fr}
+  .hooklist li{font-size:21px}
+}
 </style>
-
-<header class="top">
- <div class="brandrow">
-  <span class="wordmark">SUPERMIND</span>
-  <span class="tag">Creator Network &amp; Affiliate Program · Internal · v5.0 · Sept 2026</span>
- </div>
- <nav class="tabs" id="tabs">
-  <button data-t="overview" class="on">Overview</button>
-  <button data-t="todo">Master To-Do</button>
-  <button data-t="platforms">Platforms</button>
-  <button data-t="affiliates">Affiliate Program</button>
-  <button data-t="creators">Creator Collabs</button>
-  <button data-t="newsletter">Newsletter</button>
-  <button data-t="aiugc">AI UGC</button>
-  <button data-t="calendar">Calendar</button>
-  <button data-t="prompts">Prompts</button>
-  <button data-t="team">Team &amp; Ops</button>
-  <button data-t="docs">Documents</button>
- </nav>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Supermind Creator Network home"><img src="brand/web/SUPERMIND_Wordmark_SignalWhite_640w.png" alt="SUPERMIND"></a>
+    <nav aria-label="Sections" id="pubnav">
+      <a href="#how">How it works</a>
+      <a href="#earn">Earn</a>
+      <a href="#platforms">Platforms</a>
+      <a href="#tiktok">TikTok Shop</a>
+      <a href="#post">What to post</a>
+      <a href="#rules">Rules</a>
+      <a href="#downloads">Downloads</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <button class="team-btn" type="button" id="teamOpen">Team access</button>
+  </div>
 </header>
 
-<main>
+<div id="publicView">
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap">
+      <div>
+        <div class="hero-rule"><i></i><b></b><u></u></div>
+        <h1>Clarity is the luxury. Come sell some.</h1>
+        <p class="lede">The Supermind Creator Network is the affiliate program for functional mushroom coffee with the doses printed on the bag. Free to join, no approval queue, and commission that climbs the week you earn it.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://whop.com/supermind" target="_blank" rel="noopener">Join the Creator Network, free</a>
+          <a class="btn btn-ghost" href="downloads/affiliate/SM-CN-01_AffiliateHandbook.pdf" download>Download the handbook</a>
+        </div>
+      </div>
+      <div class="hero-facts" aria-label="Program at a glance">
+        <div><strong>10–30%</strong><span>Commission on every sale you create</span></div>
+        <div><strong>$0</strong><span>To join. No minimum purchase, ever</span></div>
+        <div><strong>30 days</strong><span>Your link keeps tracking after the click</span></div>
+        <div><strong>Thursdays</strong><span>Affiliate Connect, live and recorded</span></div>
+      </div>
+    </div>
+  </section>
 
-<!-- ============ OVERVIEW ============ -->
-<section class="pane" data-pane="overview">
- <div class="kicker">Owner: B. Amechi · Lead Marketing Producer &amp; Affiliate Program Manager</div>
- <h1>Two engines.<br>One growth machine.</h1>
- <div class="heroline"></div>
- <p class="lede">Supermind's marketing runs on two things: <b>creator growth collaborations</b> and an <b>affiliate program</b>. Everything else supports one or the other. This is a main driver of the business — not a side project — so the standard is that we borrow what already works from brands ahead of us, decide from data, and go for the largest return available.</p>
+  <section class="block" id="how">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>From signup to first sale in a week.</h2>
+        <p>Everything you need to post is already built. The course takes a lunch break, the assets are pre-approved, and the people answering your questions are the people who run the program.</p>
+      </div>
+      <div class="steps"><ol>
+        <li><div class="n">1</div><h3>Join Whop</h3><p>whop.com/supermind. Free. The course, The Vault, the leaderboard and Help live there.</p></li>
+        <li><div class="n">2</div><h3>Get your code</h3><p>Choose it yourself in Start Here, Module 02. It gives your audience 10% off and it is yours permanently.</p></li>
+        <li><div class="n">3</div><h3>Create your Ziion account</h3><p>ziion.io. The Supermind space opens shortly and the link arrives by email and in Whop.</p></li>
+        <li><div class="n">4</div><h3>Post once</h3><p>Feed or Reels. Tag @supermindlab, add #ad, code in the last line. Then do it again next week.</p></li>
+      </ol></div>
+    </div>
+  </section>
 
- <div class="callout" style="margin-top:26px"><h4>Before the next meeting</h4>
- <p><b>Read every tab on this site properly, and download the documents.</b> They're on the Documents tab — one click each. The tabs are the summary; the PDFs are the detail your role actually runs on.</p>
- <p style="margin-top:10px">Then we meet, walk the to-do list together, assign owners, and <b>start executing immediately.</b> The build list is 82 items and most of it is unblocked today.</p></div>
+  <section class="block alt" id="earn">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>You climb on sales. Nothing else.</h2>
+        <p>Followers do not move you up and neither does time served. Sell $400 in any 30 days and you are a Creator. Sell $1,000 and you are a Partner. We check weekly, so the promotion arrives without you asking.</p>
+      </div>
+      <div class="ladder" role="list" aria-label="Commission tiers">
+        <div class="rung" role="listitem"><div class="tier">Member</div><div class="pct">10%<small> / 15%</small></div><div class="how">Automatic when you join</div><div class="gets">Your code and link, the course, The Vault, both communities</div></div>
+        <div class="rung" role="listitem"><div class="tier">Creator</div><div class="pct">15%<small> / 20%</small></div><div class="how">$400 in sales in any 30 days</div><div class="gets">The Creator folder: advanced formats, top hooks, early campaign packs</div></div>
+        <div class="rung" role="listitem"><div class="tier">Partner</div><div class="pct">20%<small> / 25%</small></div><div class="how">$1,000 in sales in any 30 days</div><div class="gets">Co-produced content, event collab pack, newsletter feature, membership card</div></div>
+        <div class="rung" role="listitem"><div class="tier">Flagship</div><div class="pct">20%<small> / 30%</small></div><div class="how">By invitation</div><div class="gets">Campaign-window rates up to 30% on TikTok, event invitations, a film about your work</div></div>
+      </div>
+      <p class="small">Website rate first, TikTok Shop rate second. Flagship TikTok rates run 25–30% during campaign windows. Partner membership cards ship as soon as print production opens.</p>
+      <div class="three" style="margin-top:40px">
+        <div class="panel"><h3>Your code</h3><p>Typed at checkout. Your customer gets 10% off and the sale is tagged to you. One discount per order, so tell people to use yours.</p></div>
+        <div class="panel"><h3>Your link</h3><p>Tracks the sale for 30 days from the click, even when nothing is typed. Share the code and the link together.</p></div>
+        <div class="panel"><h3>Getting paid</h3><p>Website commission is paid monthly for the previous month; the date and minimum are in your welcome email. TikTok Shop pays you directly on its own schedule.</p></div>
+      </div>
+    </div>
+  </section>
 
- <div class="grid g4" style="margin-top:30px">
-  <div class="stat"><div class="big mono">23 → 250</div><div class="lbl">Affiliates · open enrollment</div></div>
-  <div class="stat"><div class="big mono">$400 / $1K</div><div class="lbl">Tier thresholds · 30 days</div></div>
-  <div class="stat"><div class="big mono">428</div><div class="lbl">Website sessions · the constraint</div></div>
-  <div class="stat"><div class="big mono">Sept 15</div><div class="lbl">TikTok live · budget deadline</div></div>
- </div>
+  <section class="block" id="platforms">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Five platforms, each with one job.</h2>
+        <p>Join both Whop and Ziion. They do different jobs, so nobody has to choose. Every sale is recorded in exactly one system and never double counts.</p>
+      </div>
+      <div class="plat">
+        <article>
+          <h3>Whop · the school and the scoreboard</h3>
+          <a class="addr" href="https://whop.com/supermind" target="_blank" rel="noopener">whop.com/supermind</a>
+          <ol>
+            <li>Choose Join. It is free and no card is requested.</li>
+            <li>Read the welcome message in your private thread.</li>
+            <li>Finish Start Here: eight modules, two short lessons each.</li>
+            <li>Open The Vault for logos, photography, b-roll, captions, hooks and campaign packs.</li>
+            <li>Ask anything in Help.</li>
+          </ol>
+          <p class="small" style="margin-top:10px">The Creator, Partner and Flagship folders are visible from day one and open when you reach the tier.</p>
+        </article>
+        <article>
+          <h3>Ziion · the community</h3>
+          <a class="addr" href="https://ziion.io" target="_blank" rel="noopener">ziion.io</a>
+          <ol>
+            <li>Create your free account today.</li>
+            <li>The Supermind space opens shortly. The link goes out in Whop Announcements and by email.</li>
+            <li>Join the space when it opens and turn on event notifications so the Thursday call reaches you.</li>
+          </ol>
+          <p class="small" style="margin-top:10px">Hosting something of your own? Post it in Ziion and we promote it to the network.</p>
+        </article>
+        <article>
+          <h3>The website · your code and link</h3>
+          <a class="addr" href="https://asupermind.com" target="_blank" rel="noopener">asupermind.com</a>
+          <ol>
+            <li>Code in the last line of every caption.</li>
+            <li>Link in your bio.</li>
+            <li>Product facts come from the site every time, never from memory.</li>
+          </ol>
+        </article>
+        <article>
+          <h3>ManyChat · comments into sales</h3>
+          <a class="addr" href="https://manychat.com" target="_blank" rel="noopener">manychat.com</a>
+          <ol>
+            <li>Connect your Instagram professional account. Free to start.</li>
+            <li>Set one comment trigger, for example CLARITY.</li>
+            <li>The auto-DM sends one line in your voice, your code and your link.</li>
+          </ol>
+          <p class="small" style="margin-top:10px">Ask in Help for the exact trigger and DM copy the brand account uses.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
- <div class="sec">
-  <h2>Engine One — creator growth collaborations.</h2>
-  <div class="rule"></div>
-  <div class="two">
-   <div>
-    <p>We put the marketing budget into people instead of platform ad spend. Gift boxes, event collab packs, micro-influencer campaigns, docu-profiles — converting money into product, relationships and film that keeps working after the spend stops.</p>
-    <ul class="clean">
-     <li><b>The goal is people who make content.</b> Not a celebrity list. The people worth our time are already producing — running events, filming, building an audience with their own hands. Someone with 40,000 followers who films every week beats a name with two million who posts twice a year.</li>
-     <li><b>Instruments:</b> the gift box (~$40–55) · the event collab pack (~$200) · production at $12 a reel · the targeted platform invite at zero cost.</li>
-     <li><b>Cadence:</b> 15–25 names a month, drafted by Amechi, approved by Keys before a note is written.</li>
-    </ul>
-   </div>
-   <div>
-    <h4>The instruments at a glance</h4>
-    <div class="tablewrap"><table style="min-width:0">
-     <tr><th>Instrument</th><th>Cost</th><th>What it buys</th></tr>
-     <tr><td><strong>Gift box</strong></td><td class="mono">~$40–55</td><td>A relationship and a handwritten note from Keys</td></tr>
-     <tr class="hl"><td><strong>Event collab pack</strong></td><td class="mono">~$200</td><td>A whole room and their content team filming it</td></tr>
-     <tr><td><strong>Micro-influencer campaign</strong></td><td class="mono">$12/reel</td><td>25 reels for $300, all-inclusive</td></tr>
-     <tr><td><strong>Targeted invite</strong></td><td class="mono">$0</td><td>A commission relationship, no upfront cost</td></tr>
-     <tr><td><strong>Partnership</strong></td><td class="mono">Varies</td><td>Sponsorship, activation, co-marketing, equity</td></tr>
-    </table></div>
-   </div>
-  </div>
- </div>
+  <section class="block tiktok" id="tiktok">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>TikTok Shop. The sale closes in the scroll.</h2>
+        <p>Your viewer never leaves the app. You tag the product, they buy in two taps, and TikTok pays you directly. TikTok sales count toward your tier. The brand account is @supermindlab.</p>
+      </div>
+      <div class="two">
+        <div>
+          <h3>Who can join</h3>
+          <div class="scroll"><table class="tbl">
+            <tr><th>Requirement</th><th>US rule</th></tr>
+            <tr><td>Age</td><td>18 or older</td></tr>
+            <tr><td>Location</td><td>Based in the United States</td></tr>
+            <tr><td>Identity</td><td>Pass TikTok's identity verification</td></tr>
+            <tr><td>Followers</td><td>1,000 or more</td></tr>
+            <tr><td>Account</td><td>In good standing</td></tr>
+          </table></div>
+          <p class="small" style="color:#B9B0A4">Under 5,000 followers, TikTok starts you in a 30-day Creator Pilot with limits on shoppable posts. TikTok's app is the final word on eligibility.</p>
+        </div>
+        <div>
+          <h3>Set it up</h3>
+          <ol>
+            <li>Profile → <strong>TikTok Studio → Monetization → TikTok Shop for Creator → Join now</strong>.</li>
+            <li>Verify your identity and add payout and tax details when prompted.</li>
+            <li>Open the product marketplace and search <strong>Supermind</strong>.</li>
+            <li><strong>Add to showcase</strong> the products you want to promote.</li>
+            <li><strong>Tag the product</strong> in every video. An untagged video cannot pay you.</li>
+            <li>Pin the product on your best-performing video.</li>
+          </ol>
+          <div class="note">Coffee, chocolate and Performance sell on TikTok. Promote gummies through Instagram, email and your website link, since TikTok does not allow that category.</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
- <div class="sec">
-  <h2>Engine Two — the affiliate program.</h2>
-  <div class="rule"></div>
-  <p class="lede">Open to anyone. The job isn't to recruit carefully — it's to <b>build a community of sellers, check in on them constantly, and hand them the tools to be good at it.</b> People don't fail here for lack of motivation. They fail because nobody told them what to post or answered their message.</p>
-  <div class="two" style="margin-top:20px">
-   <div>
-    <h4>It spans four platforms, each with one job</h4>
-    <div class="tablewrap"><table style="min-width:0">
-     <tr><th>Platform</th><th>Its one job</th></tr>
-     <tr><td><strong>Shopify</strong></td><td>The website rail — owns the customer email and the subscription</td></tr>
-     <tr><td><strong>TikTok Shop</strong></td><td>In-app volume — the sale closes in the scroll</td></tr>
-     <tr><td><strong>WHOP</strong></td><td>Education, the leaderboard, campaigns, and where the Thursday call is hosted</td></tr>
-     <tr class="hl"><td><strong>Zion</strong></td><td><b>The community</b> — hikes, events, and promoting the events our own people run</td></tr>
-    </table></div>
-    <p class="footnote">Everyone signs up to WHOP and Zion. They do different jobs and nobody has to choose. Attribution never crosses platforms — a sale lands in exactly one system.</p>
-   </div>
-   <div>
-    <h4>The rhythm is the product</h4>
-    <ul class="clean">
-     <li><b>A daily 10-minute check</b> so nobody waits days for a reply or a code.</li>
-     <li><b>A Thursday call, every week</b> — wins, one product story, the format that's converting, open floor.</li>
-     <li><b>A monthly challenge</b> with a hashtag, a deadline and a prize.</li>
-     <li><b>A tier that moves the moment someone earns it</b> — $400 in 30 days to Creator, $1,000 to Partner with a membership card in the mail.</li>
-     <li><b>Reciprocity:</b> when an affiliate hosts something, we promote it in Zion. We don't just take their content — we fill their rooms.</li>
-    </ul>
-   </div>
-  </div>
- </div>
+  <section class="block" id="post">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>What to post, and where.</h2>
+        <p>Feed and Reels, once a week, every week. Stories disappear in a day and reach a fraction of your audience. Add @supermindlab as a collaborator and your post runs on both pages at once.</p>
+      </div>
+      <div class="two">
+        <div>
+          <div class="scroll"><table class="tbl">
+            <tr><th>Format</th><th>What it looks like</th></tr>
+            <tr><td><strong>The morning routine</strong></td><td>The coffee inside a real morning. The best structural fit for this product</td></tr>
+            <tr><td><strong>The label read</strong></td><td>Doses on screen, read out loud, fifteen seconds</td></tr>
+            <tr><td><strong>The deep work block</strong></td><td>Cup, timer, and what actually got finished</td></tr>
+            <tr><td><strong>The taste test</strong></td><td>Ours against another brand, honestly</td></tr>
+          </table></div>
+          <p class="small">A new Format of the Week lands in Whop every Monday. This week: <a href="downloads/affiliate/SM-CN-05_FormatOfTheWeek_LabelRead.pdf" download>The Label Read</a>. Live campaign: <a href="downloads/affiliate/SM-CN-06_CampaignPack_ClarityIsTheLuxury.pdf" download>#ClarityIsTheLuxury</a>, 22 September to 20 October.</p>
+        </div>
+        <div>
+          <h3>Five hooks to start with</h3>
+          <ul class="hooklist">
+            <li>Read the back of your mushroom coffee. I'll wait.</li>
+            <li>Four uninterrupted hours is the rarest thing I own.</li>
+            <li>My whole morning is three moves. Scoop, pour, flow.</li>
+            <li>I didn't think mushroom coffee could taste like coffee.</li>
+            <li>Watch what I got done after this cup.</li>
+          </ul>
+          <p class="small">Fifteen more in the <a href="downloads/affiliate/SM-CN-04_HookBank.pdf" download>Hook Bank</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
- <div class="sec">
-  <h2>How we make decisions.</h2>
-  <div class="rule"></div>
-  <div class="grid g3">
-   <div class="card"><span class="n">01</span><h3>Borrow before inventing</h3><p>The playbooks that work here are public. The category leader runs a wide affiliate base and graduates top performers into paid partnerships. The winning 2026 creator deals are 6–12 month ambassadorships with a purpose component, not one-off posts. We copy what's proven and spend our originality on the brand, not the mechanics.</p></div>
-   <div class="card"><span class="n">02</span><h3>Decide from data</h3><p>Every budget line has a number attached so that on the first of the month it can be judged rather than defended. A line that produced nothing does not repeat. Every collab pack is measured on 60-day attributed revenue against its $200.</p></div>
-   <div class="card"><span class="n">03</span><h3>Go where the return is biggest</h3><p>428 website sessions last month against 166,000 Instagram views. That gap is worth more than any new idea in this deck — which is why ManyChat goes in today, before anything else on the list.</p></div>
-  </div>
- </div>
+  <section class="block alt" id="rules">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Four rules. Every post.</h2>
+        <p>They protect you first and the brand second. Unsure about a sentence? Post it in Help before you publish. Nobody minds the question.</p>
+      </div>
+      <div class="rules4">
+        <div><strong>Disclose</strong><p>#ad or #affiliate in the caption and visible on video. United States law.</p></div>
+        <div><strong>Tag</strong><p>@supermindlab on every post, as a collaborator where the platform allows.</p></div>
+        <div><strong>Label AI</strong><p>#ai on any AI-generated visual. That is the whole requirement.</p></div>
+        <div><strong>Tell the truth</strong><p>Your experience in your words. Never cures, treats, prevents or heals.</p></div>
+      </div>
+      <div class="scroll"><table class="tbl">
+        <tr><th>Instead of</th><th>Write</th></tr>
+        <tr><td>Cures my brain fog</td><td>Cuts through the fog for me</td></tr>
+        <tr><td>Treats my ADHD</td><td>On days my focus is everywhere, this is what I reach for</td></tr>
+        <tr><td>Heals your gut</td><td>Sits easier on my stomach than regular coffee</td></tr>
+        <tr><td>Energy for hours</td><td>I skip the 2pm crash with this</td></tr>
+        <tr><td>Clinically proven to…</td><td>Here is what the research says about Lion's Mane, with the link</td></tr>
+        <tr><td>Replaces your medication</td><td>Never, in any form</td></tr>
+      </table></div>
+      <p class="small">Health question from your audience about a condition, medication, pregnancy or allergy? Point them to the ingredient list at asupermind.com and to their doctor or pharmacist. Paid ads with your code need written permission first.</p>
+    </div>
+  </section>
 
- <div class="sec">
-  <h2>Where we stand.</h2>
-  <div class="rule"></div>
-  <div class="two">
-   <div>
-    <div class="tablewrap"><table style="min-width:0">
-     <tr><th>Metric</th><th>August 2026</th></tr>
-     <tr><td><strong>Total sales</strong> (Shopify $8,899 + Invest Fest $12,825)</td><td class="mono"><strong>$21,513</strong></td></tr>
-     <tr><td>Active subscribers</td><td class="mono">163</td></tr>
-     <tr class="hl"><td><strong>Affiliate program</strong></td><td class="mono"><strong>23 active · $1,748</strong></td></tr>
-     <tr><td>Top affiliate — Ruben Torres</td><td class="mono">~17 orders · $736 (42%)</td></tr>
-     <tr><td>Website</td><td class="mono">428 sessions</td></tr>
-     <tr><td>Instagram</td><td class="mono">166k views · 615 profile taps</td></tr>
-    </table></div>
-   </div>
-   <div>
-    <h4>Why there are only 23 affiliates</h4>
-    <p><b>Because there has never been a way to sign up.</b> Every one of the 23 came through a personal conversation. No application page, no funnel, no automated welcome, no onboarding. The program has been a series of favours, not a system.</p>
-    <p>That's the entire explanation, and it's fixable in a week: a public form, a Google Apps Script into a shared sheet, ten automated emails, and a code issued instantly. Then the tiers sort out who's good — we find out by letting people try, not by guessing in advance.</p>
-   </div>
-  </div>
- </div>
+  <section class="block" id="downloads">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Downloads.</h2>
+        <p>Everything here is yours to keep and use. The same files live in The Vault inside Whop, alongside product photography and b-roll.</p>
+      </div>
+      <div class="dl">
+        <a href="downloads/affiliate/SM-CN-01_AffiliateHandbook.pdf" download><span class="code">SM-CN-01</span><span class="t">Affiliate Handbook<span class="d">The whole program in one file. Start here</span></span><span class="f">PDF · 7 pp</span></a>
+        <a href="downloads/affiliate/SM-CN-02_PlatformSetupGuide.pdf" download><span class="code">SM-CN-02</span><span class="t">Platform Setup Guide<span class="d">Whop, Ziion, TikTok Shop, the website and ManyChat</span></span><span class="f">PDF · 5 pp</span></a>
+        <a href="downloads/affiliate/SM-CN-03_RulesAndClaimsCard.pdf" download><span class="code">SM-CN-03</span><span class="t">Rules and Claims Card<span class="d">Disclosure, AI and what you can say</span></span><span class="f">PDF · 3 pp</span></a>
+        <a href="downloads/affiliate/SM-CN-04_HookBank.pdf" download><span class="code">SM-CN-04</span><span class="t">Hook Bank<span class="d">Twenty opening lines, in four groups</span></span><span class="f">PDF · 4 pp</span></a>
+        <a href="downloads/affiliate/SM-CN-05_FormatOfTheWeek_LabelRead.pdf" download><span class="code">SM-CN-05</span><span class="t">Format of the Week<span class="d">The Label Read. Shot list, hooks, caption</span></span><span class="f">PDF · 3 pp</span></a>
+        <a href="downloads/affiliate/SM-CN-06_CampaignPack_ClarityIsTheLuxury.pdf" download><span class="code">SM-CN-06</span><span class="t">Campaign Pack<span class="d">#ClarityIsTheLuxury, 22 Sept to 20 Oct</span></span><span class="f">PDF · 4 pp</span></a>
+        <a href="downloads/affiliate/SM-CN-07_BrandKit.zip" download><span class="code">SM-CN-07</span><span class="t">Brand Kit<span class="d">Wordmark PNGs for posts and web, with usage rules</span></span><span class="f">ZIP</span></a>
+      </div>
+    </div>
+  </section>
 
- <div class="sec">
-  <h2>The tier ladder.</h2>
-  <div class="rule"></div>
-  <div class="grid g4">
-   <div class="card"><span class="n">T0</span><h3>Member</h3><p>Anyone who signs up. 10% website, 15% TikTok. Code issued instantly, no approval queue.</p></div>
-   <div class="card"><span class="n">T1</span><h3>Creator</h3><p>15% / 20%. Quarterly seeding, early access to drops, name on the leaderboard.</p></div>
-   <div class="card"><span class="n">T2</span><h3>Partner</h3><p>20% / 25%. <b>Membership card</b>, event collab pack, co-produced content, newsletter feature.</p></div>
-   <div class="card"><span class="n">T3</span><h3>Flagship</h3><p>25–30% in campaign windows. Docu-profile, event invites, golden tickets, 20 min with Keys.</p></div>
-  </div>
-  <div class="tablewrap"><table>
-   <tr><th>Tier</th><th>Website</th><th>TikTok</th><th>Promotion trigger</th></tr>
-   <tr><td><strong>T0 Member</strong></td><td class="mono">10%</td><td class="mono">15%</td><td>Automatic on signup</td></tr>
-   <tr class="hl"><td><strong>T1 Creator</strong></td><td class="mono">15%</td><td class="mono">20%</td><td><b>$400 in attributed sales within 30 days</b></td></tr>
-   <tr class="hl"><td><strong>T2 Partner</strong></td><td class="mono">20%</td><td class="mono">25%</td><td><b>$1,000 in attributed sales within 30 days</b></td></tr>
-   <tr><td><strong>T3 Flagship</strong></td><td class="mono">20%</td><td class="mono">25–30%</td><td>By invitation, Keys signs off</td></tr>
-  </table></div>
-  <div class="goldbox"><h4>The doctrine governing every payment</h4>
-  <p>Keys, September 1: <b>"I want them to see the sale and then get a commission on the sale."</b> No per-post fees, no retainers for content that doesn't convert. Cash goes to commissions and production vendors. Creators get invested in with product, collab packs, membership cards, access and craft.</p></div>
- </div>
-
- <div class="sec">
-  <h2>Who we're talking to.</h2>
-  <div class="rule"></div>
-  <div class="two">
-   <div>
-    <p>The audience skews to <b>Black women, roughly 25–45, who are building something</b> — she works, creates, runs something or is about to, takes her mornings seriously, and is tired of wellness that talks down to her.</p>
-    <p>That's the default reader for the newsletter, the default casting for photography, and the weighting on the creator list — roughly two-thirds women per tranche. Keys' own audience and the workout collaborations he brings cover the other side, through his brand rather than through this program.</p>
-    <p><b>It's an audience decision, not a restriction.</b> The affiliate program is open to anyone, most of our current sellers are men, and nobody gets turned away. It just tells us who to prioritise when there's a choice to make.</p>
-   </div>
-   <div>
-    <h4>Why this audience</h4>
-    <ul class="clean">
-     <li>The Instagram audience is 60% men today, and Keys' read is that the brand takes off when it becomes a women's wellness brand with real depth.</li>
-     <li>The collagen coffee — "Forever Young" — is the product this is built around, targeted before Black Friday.</li>
-     <li>The adjacent supplement category proves the audience converts at scale: Olly signed Naomi Osaka, Thorne signed Misty Copeland, both May 2026.</li>
-     <li>We could not verify a single 2026 functional-coffee partnership with a Black woman creator. The lane is unclaimed.</li>
-    </ul>
-   </div>
-  </div>
- </div>
-
- <div class="sec">
-  <h2>The funnel, end to end.</h2>
-  <div class="rule"></div>
-  <div class="tablewrap"><table>
-   <tr><th>Stage</th><th>What happens</th><th>Built with</th></tr>
-   <tr><td><strong>1 · Discover</strong></td><td>An affiliate's post, a Keys post, a newsletter, or a gift box arrives. No prices in the feed — the conversation moves to the DM.</td><td>Content + ManyChat</td></tr>
-   <tr class="hl"><td><strong>2 · Apply</strong></td><td>Branded application page: name, email, socials with follower counts, niche, why Supermind, where they'll promote, shipping address.</td><td>Web form → Google Apps Script → shared Sheet</td></tr>
-   <tr><td><strong>3 · Instant welcome</strong></td><td>Automatic within minutes: code, link, Handbook, both community invites, the tier ladder, one thing to do today.</td><td>Email 1</td></tr>
-   <tr><td><strong>4 · Onboard</strong></td><td>Days 2, 5, 10, 21 — how to post, ManyChat setup, first-sale nudge, the ladder. Plus the WHOP orientation course.</td><td>Emails 2–5</td></tr>
-   <tr><td><strong>5 · Activate</strong></td><td>First sale triggers congratulations and a screenshot request. No sale by day 45 triggers re-engagement.</td><td>Emails 6–7</td></tr>
-   <tr class="hl"><td><strong>6 · Promote</strong></td><td>$400/30 days → Creator, automatically. $1,000/30 days → Partner, with a membership card in the mail.</td><td>Emails 8–9</td></tr>
-   <tr><td><strong>7 · Amplify</strong></td><td>Their story runs in the newsletter. Best content reposted, collab-posted, boosted with permission.</td><td>Network pillar + repost pipeline</td></tr>
-  </table></div>
- </div>
-</section>
-<!-- ============ TODO ============ -->
-<section class="pane" data-pane="todo" hidden>
- <div class="kicker">Execution · SM-AFF-08</div>
- <h2>Every task, every owner, every date.</h2>
- <div class="rule red"></div>
- <p class="lede">Eighty-two tasks. If it's not on this list it's not happening, and if it's on this list it has a name next to it. Download SM-AFF-08 from the Documents tab for the full breakdown — these are the blocks that matter this week.</p>
-
- <div class="sec">
-  <h4>Today and tomorrow</h4>
-  <div class="tablewrap"><table>
-   <tr><th>#</th><th>Task</th><th>Detail</th><th>Owner</th></tr>
-   <tr class="hl"><td class="mono">1</td><td><strong>Set up ManyChat on the Supermind Instagram</strong></td><td>Through Amechi's account, which already runs the Keys and Supermind ManyChat. Connect, verify permissions, confirm billing tier.</td><td>Amechi</td></tr>
-   <tr class="hl"><td class="mono">2</td><td><strong>Submit the cost for reimbursement</strong></td><td>Screenshot the receipt to Mariah with September expenses. Recurring — note it as a standing line so it doesn't need re-approving monthly.</td><td>Amechi → Mariah</td></tr>
-   <tr class="hl"><td class="mono">3</td><td><strong>Credentials to the shared password list</strong></td><td>Login, which account it sits under, billing owner, who else has access. Same day — this is how a tool becomes company infrastructure instead of one person's login.</td><td>Amechi</td></tr>
-   <tr><td class="mono">4</td><td><strong>Audit the password list while you're in it</strong></td><td>Shopify, TikTok Seller Center, Instagram, email platform, Google Workspace, WHOP, Zion — all present with a named owner.</td><td>Amechi</td></tr>
-   <tr><td class="mono">5–7</td><td><strong>Build three ManyChat flows</strong></td><td>Keyword → shop link · "AFFILIATE" → application form · story-reply → common product question.</td><td>Amechi / Steve</td></tr>
-   <tr><td class="mono">8</td><td><strong>Keywords on the next 10 IG captions</strong></td><td>Every post carries a comment keyword. No prices in the feed.</td><td>Steve</td></tr>
-  </table></div>
- </div>
-
- <div class="sec">
-  <h4>This week — accounts and the funnel</h4>
-  <div class="tablewrap"><table>
-   <tr><th>#</th><th>Task</th><th>Owner</th></tr>
-   <tr><td class="mono">9–11</td><td><strong>Create the WHOP account</strong>, build the hub (Course, Chat, Forum, Events, Challenges), credentials to the password list</td><td>Amechi + Celina</td></tr>
-   <tr><td class="mono">12–13</td><td><strong>Set up the Supermind presence in Zion</strong> plus a route for affiliates to submit their own events</td><td>Antoine + Amechi</td></tr>
-   <tr><td class="mono">14</td><td><strong>Confirm Shopify Collabs is installed — and install it the same day if not.</strong> Don't spend a week comparing apps.</td><td>Mariah + Celina</td></tr>
-   <tr class="hl"><td class="mono">15–17</td><td><strong>Audit all 23 affiliates; fix Ruben Torres' tracking</strong> (42% of revenue); verify attribution on the other 22</td><td>Celina</td></tr>
-   <tr><td class="mono">18–20</td><td><strong>Build the three tier programs</strong>, set payouts (30-day hold, auto, W-9 on), set the UTM standard</td><td>Celina + Amechi</td></tr>
-   <tr class="hl"><td class="mono">21–22</td><td><strong>Build the application page and the Google Apps Script.</strong> Test with three dummy submissions before going live.</td><td>Amechi</td></tr>
-   <tr><td class="mono">23–24</td><td><strong>Build the shared tracking sheet</strong> — seven tabs, plus the 30-day rolling revenue formula that drives tier promotions</td><td>Celina</td></tr>
-   <tr class="hl"><td class="mono">25</td><td><strong>Draft all ten funnel emails</strong> — welcome · what a good post looks like · ManyChat setup · first-sale nudge · the ladder · congratulations · re-engagement · Creator promotion · Partner promotion · subscriber invitation. <b>Celina's first assignment.</b></td><td>Celina → Amechi</td></tr>
-   <tr><td class="mono">26–28</td><td><strong>Wire the sequence, test end to end, link the form everywhere</strong> — bio, ManyChat, newsletter footer, WHOP, Zion, Handbook</td><td>Amechi + Pam + Steve</td></tr>
-  </table></div>
- </div>
-
- <div class="sec">
-  <h4>By September 15</h4>
-  <div class="tablewrap"><table>
-   <tr><th>#</th><th>Task</th><th>Owner</th></tr>
-   <tr class="hl"><td class="mono">29–30</td><td><strong>Shoot professional product photography and video</strong> — every launch SKU plus lifestyle, shot to the World Bible. <b>Amechi leads, not Steve.</b> Everything downstream depends on it.</td><td>Amechi</td></tr>
-   <tr><td class="mono">31–35</td><td><strong>Open TikTok Seller Center</strong>, complete verification, connect Shopify, list coffee/chocolate/creatine, verify the referral fee</td><td>Amechi + Celina</td></tr>
-   <tr><td class="mono">36–37</td><td><strong>Open collaboration at 15%; first 50 targeted invites</strong></td><td>Celina</td></tr>
-   <tr class="hl"><td class="mono">38</td><td><strong>Present the media plan in the portal</strong> — releases the $2,500, use-or-lose</td><td>Amechi</td></tr>
-   <tr class="hl"><td class="mono">39</td><td><strong>Book the Keys × Amechi session.</strong> The named bottleneck — four deliverables wait on it.</td><td>Amechi</td></tr>
-  </table></div>
- </div>
-
- <div class="sec">
-  <h4>September — content, design and campaigns</h4>
-  <div class="tablewrap"><table>
-   <tr><th>#</th><th>Task</th><th>Owner</th></tr>
-   <tr><td class="mono">40–43</td><td><strong>Design the membership card and the gift box</strong>; three print quotes each; order the first 50 cards; photograph the box as a product</td><td>Amechi → Mariah sources</td></tr>
-   <tr><td class="mono">44–46</td><td><strong>Draft the September tranche list</strong> → Keys approves → <strong>Keys' on-camera notes and packing session</strong> → ship 15 boxes within 48 hours</td><td>Amechi · Keys · Celina</td></tr>
-   <tr class="hl"><td class="mono">47</td><td><strong>Record the 20-minute orientation course</strong> — products, story, approved language, tier ladder, payouts, ManyChat walkthrough. Loaded into WHOP. <b>The highest-value asset on the platform.</b></td><td>Amechi</td></tr>
-   <tr><td class="mono">48</td><td><strong>Produce AI UGC batch 1</strong> — 20 assets across five sets. Track A only until Keys signs off on people.</td><td>Celina</td></tr>
-   <tr><td class="mono">49–53</td><td><strong>Build the Claude newsletter project</strong> (4 knowledge files) · <strong>Keys records the first voice-note batch</strong> · rebuild the template on Edition 02 · lock the open line and sign-off · draft and schedule the first 12 issues</td><td>Amechi · Keys · Pam</td></tr>
-   <tr class="hl"><td class="mono">54</td><td><strong>Send the subscriber affiliate campaign</strong> — all 163, membership-upgrade framing, codes pre-generated. Top 10 get product first with a recipe request.</td><td>Pam builds · Celina follows up</td></tr>
-   <tr><td class="mono">55–56</td><td><strong>Two-week IG content plan</strong> with a Keys-led rotation · <strong>launch challenge 1, THE ARCHITECTURE</strong></td><td>Steve · Celina</td></tr>
-  </table></div>
- </div>
-
- <div class="sec">
-  <h4>Meetings to put on the calendar now</h4>
-  <div class="tablewrap"><table>
-   <tr><th>Meeting</th><th>When</th><th>Who</th><th>Purpose</th></tr>
-   <tr class="hl"><td><strong>Growth Initiative call</strong></td><td>Weekly, Tuesdays</td><td>Full team</td><td>15-minute affiliate block, numbers first</td></tr>
-   <tr class="hl"><td><strong>Affiliate Connect call</strong></td><td><b>Weekly, Thursdays, 30 min</b></td><td>Celina hosts · all affiliates</td><td>Wins and leaderboard · one product story · format of the week · open floor. In WHOP, recorded.</td></tr>
-   <tr class="hl"><td><strong>Celina × Amechi deep work</strong></td><td>Weekly, Tue/Wed, 90 min</td><td>Celina + Amechi</td><td>Building — leads, campaigns, creator development</td></tr>
-   <tr><td><strong>Keys × Amechi brand session</strong></td><td><b>ASAP, then monthly</b></td><td>Keys + Amechi</td><td>Branding, gift box, target list, AI sign-off, media plan</td></tr>
-   <tr><td><strong>Keys packing + notes session</strong></td><td>Monthly, on camera</td><td>Keys + Amechi</td><td>Handwritten notes and box packing filmed</td></tr>
-   <tr><td><strong>Keys newsletter voice notes</strong></td><td>Monthly, 90 min</td><td>Keys</td><td>Twelve topics recorded for the month</td></tr>
-   <tr><td><strong>Monthly tier review</strong></td><td>First Monday</td><td>Celina</td><td>Promotion rule against 30-day rolling totals</td></tr>
-   <tr><td><strong>Monthly board line</strong></td><td>First Tuesday</td><td>Amechi</td><td>Numbers, spend, the ask</td></tr>
-   <tr><td><strong>AI UGC production</strong></td><td>Monthly, 3 hrs</td><td>Celina</td><td>20–30 assets themed to the coming month</td></tr>
-  </table></div>
- </div>
-
- <div class="sec">
-  <h4>Outreach to open</h4>
-  <div class="tablewrap"><table>
-   <tr><th>#</th><th>Task</th><th>Owner</th><th>By</th></tr>
-   <tr class="hl"><td class="mono">66</td><td><strong>Apply to Essence WeLoveUs.shop</strong> — marketplace exclusively for Black women-led brands, 75M monthly touchpoints, 400+ waitlisted. We qualify.</td><td>Mariah + Amechi</td><td class="mono">Sept 8</td></tr>
-   <tr class="hl"><td class="mono">67</td><td><strong>Open the Sensori conversation</strong> — Keys is already an investor. Co-marketing, shared retail introductions, joint activation.</td><td>Keys + Amechi</td><td class="mono">Sept 15</td></tr>
-   <tr class="hl"><td class="mono">68</td><td><strong>Pull the High Level Conversations guest archive</strong> — the warmest target pool we have and nobody else can access it.</td><td>Keys</td><td class="mono">Sept 15</td></tr>
-   <tr><td class="mono">69</td><td><strong>Book the Invest Fest 2027 activation conversation</strong> — bring last year's $12,825 to the table. Confirm the host city first.</td><td>Amechi</td><td class="mono">Sept 30</td></tr>
-   <tr><td class="mono">70–71</td><td>Sober Black Girls Club for Dry January 2027 · GirlTrek partnership</td><td>Amechi</td><td class="mono">Oct</td></tr>
-   <tr><td class="mono">72–77</td><td>Black on the Block staffing · Maryland sponsorship · Timbuktu proposal · creatine seeding · three collab packs booked</td><td>Various</td><td class="mono">Sept</td></tr>
-  </table></div>
- </div>
-
- <div class="sec">
-  <h4>October 1 — the definition of done</h4>
-  <div class="grid g4">
-   <div class="card"><span class="n">01</span><h3>The door is open</h3><p>Form live, script running, sheet populating, ten emails firing. Anyone can join without talking to us.</p></div>
-   <div class="card"><span class="n">02</span><h3>75 affiliates</h3><p>Up from 23, with 15 from the subscriber base — every one tracked correctly.</p></div>
-   <div class="card"><span class="n">03</span><h3>TikTok live</h3><p>Shop approved, open collab at 15%, first invites out, samples posting.</p></div>
-   <div class="card"><span class="n">04</span><h3>Newsletter running</h3><p>Three a week, four always queued, first affiliate story published.</p></div>
-   <div class="card"><span class="n">05</span><h3>Both communities</h3><p>WHOP hub with the orientation course; Zion presence with events flowing.</p></div>
-   <div class="card"><span class="n">06</span><h3>ManyChat working</h3><p>Three flows live, keywords on every post, sessions climbing from 428.</p></div>
-   <div class="card"><span class="n">07</span><h3>Design shipped</h3><p>Cards printed, box designed and photographed, product photography done.</p></div>
-   <div class="card"><span class="n">08</span><h3>Budget judged</h3><p>$2,500 deployed with a number on every line, ready to be assessed rather than defended.</p></div>
-  </div>
- </div>
-</section>
-
-<!-- ============ PLATFORMS ============ -->
-<section class="pane" data-pane="platforms" hidden>
- <div class="kicker">SM-AFF-04</div>
- <h2>Four platforms, four jobs.</h2>
- <div class="rule"></div>
- <div class="tablewrap"><table>
-  <tr><th></th><th>TikTok Shop</th><th>Shopify Collabs</th><th>WHOP</th><th>Zion</th></tr>
-  <tr><td><strong>What it is</strong></td><td>Our storefront inside TikTok. Checkout in-app.</td><td>The affiliate layer on our own website.</td><td>A hub platform — courses, chat, leaderboards, campaigns.</td><td>The existing community Antoine runs.</td></tr>
-  <tr class="hl"><td><strong>Its one job</strong></td><td>Turn scrolling into sales without a website visit.</td><td>Own the customer email and the subscription.</td><td><b>Affiliate infrastructure</b> — education, competition, briefs.</td><td><b>Community</b> — events, hikes, our people's own events.</td></tr>
-  <tr><td><strong>Where the sale happens</strong></td><td>Inside TikTok</td><td>Our website</td><td>Nowhere — points outward</td><td>Nowhere — points outward</td></tr>
-  <tr><td><strong>What we learn about the buyer</strong></td><td>Very little. TikTok keeps the relationship.</td><td><b>Everything.</b> Email, remarketing, subscription.</td><td>—</td><td>—</td></tr>
-  <tr><td><strong>Commission</strong></td><td>15% open · 20–25% targeted</td><td>10% / 15% / 20% by tier</td><td>n/a</td><td>n/a</td></tr>
-  <tr><td><strong>Our cost</strong></td><td>~6% referral fee + commission</td><td>2.9% on paid commissions</td><td><b>Free to run</b></td><td>Existing</td></tr>
-  <tr><td><strong>Best for</strong></td><td>Volume, discovery, Q4</td><td>Lifetime value, subscriptions</td><td>Making affiliates better at selling</td><td>Making people feel part of something</td></tr>
- </table></div>
- <div class="callout"><h4>The one thing that decides which pathway to push</h4>
- <p>A TikTok sale is a sale. A website sale is a sale <b>plus a customer</b> — the email, the permission to market again, the subscription offer. When a creator asks which to prioritise: use TikTok because that's where their audience already is, and use the link everywhere else because that's where our business compounds.</p></div>
- <p class="footnote">A creator can run all four and most should. Attribution never crosses platforms — a sale lands in exactly one system, so there's nothing to reconcile. <b>Everyone signs up to both WHOP and Zion.</b> They do different jobs and nobody has to choose.</p>
-
- <div class="sec">
-  <h2>TikTok Shop.</h2>
-  <div class="rule"></div>
-  <div class="two">
-   <div>
-    <h4>How it fits together</h4>
-    <p>TikTok Shop is the store. The affiliate program is the creator side of that same store: a creator with 1,000+ followers adds our product to a video, the viewer buys without leaving the app, TikTok pays them the commission we set. Opening the shop is what makes the affiliate program possible — they aren't two decisions.</p>
-    <h4 style="margin-top:22px">Setup by September 15</h4>
-    <ol class="steps">
-     <li>Open the US Seller Center account — every name, address and tax detail matching exactly across documents.</li>
-     <li><b>Amechi delivers the product assets.</b> Nothing lists without them.</li>
-     <li>List the launch catalog: 8 oz coffee, chocolate, creatine packs.</li>
-     <li>Structure/function language only in listings.</li>
-     <li>Connect Shopify via the official TikTok app for catalog and inventory sync.</li>
-     <li>Seller-fulfilled to start — TikTok enforces dispatch SLAs, so shipping discipline is now a marketing function.</li>
-     <li>Turn on open collaboration at 15%, then the first targeted invite batch.</li>
-     <li>Verify the referral fee for our category (~6%; new sellers often 3% for 30 days).</li>
-    </ol>
-   </div>
-   <div>
-    <h4>The affiliate levers</h4>
-    <div class="tablewrap"><table style="min-width:0">
-     <tr><th>Lever</th><th>Setting</th><th>Why</th></tr>
-     <tr><td><strong>Open collaboration</strong></td><td class="mono">15%</td><td>Public rate. Puts us in the marketplace where creators browse.</td></tr>
-     <tr class="hl"><td><strong>Targeted collaboration</strong></td><td class="mono">20–25%</td><td>50 per batch, up to 1,000/day. Where the real revenue lives.</td></tr>
-     <tr><td><strong>Campaign windows</strong></td><td class="mono">to 30%</td><td>Q4 pushes. Rates lock 30 days per creator once they promote.</td></tr>
-     <tr><td><strong>Free samples</strong></td><td class="mono">~20/mo</td><td>14-day posting window, $300 at product cost.</td></tr>
-    </table></div>
-    <p class="footnote"><b>Weight every invite batch toward women.</b> Filters: US, 10k–200k, wellness / lifestyle / beauty / food, engagement over follower count. This is the most direct lever on the 60/40 split anywhere in the program.</p>
-    <h4 style="margin-top:22px">The Q4 clock</h4>
-    <div class="tablewrap"><table style="min-width:0">
-     <tr><th>When</th><th>Move</th></tr>
-     <tr><td><strong>Sept 15</strong></td><td>Shop live, open collab on, first 50 invites, first samples</td></tr>
-     <tr><td><strong>October</strong></td><td>200 outreaches → ~20 active creators; LIVE tests; boost winners</td></tr>
-     <tr class="hl"><td><strong>Nov 1</strong></td><td><b>Samples in creators' hands</b> — the most time-sensitive date in the system</td></tr>
-     <tr><td><strong>Nov 16–Dec 1</strong></td><td>Wellness deal days <b>Nov 22–24</b>; BFCM; bundles under $30</td></tr>
-    </table></div>
-    <p class="footnote"><b>Not on TikTok:</b> the gummies. Prohibited category — they sell through Shopify, Instagram, email and affiliate links. Settled.</p>
-   </div>
-  </div>
- </div>
-
- <div class="sec">
-  <h2>Shopify Collabs.</h2>
-  <div class="rule"></div>
-  <div class="two">
-   <div>
-    <h4>Step one: confirm it exists</h4>
-    <p>Open Shopify admin → Apps. If Collabs is installed, screenshot it and proceed. <b>If not, install it that day</b> — it's free, it's from Shopify, and every affiliate mechanic depends on it. Don't spend a week deciding between apps; switching later is cheap.</p>
-    <h4 style="margin-top:22px">Configuration</h4>
-    <ol class="steps">
-     <li>Audit the 23 existing affiliates. <b>Grandfather anyone already above tier rate</b> — never cut a working affiliate's pay.</li>
-     <li>Verify attribution on every one. Start with Ruben — until this is done every number we report is understated.</li>
-     <li>One program per tier: 10% / 15% / 20%, first order, new customers.</li>
-     <li>Monthly tier review, first Monday, plus mid-month checks.</li>
-     <li>Publish the application page — and point our own form at our own sheet so we hold the data.</li>
-     <li>30-day hold, automatic payouts, W-9 collection on.</li>
-     <li>UTM standard on every link so GA4 shows which affiliates drive sessions.</li>
-     <li>Personal one-word codes at 10% depth.</li>
-    </ol>
-   </div>
-   <div>
-    <h4>What we get</h4>
-    <ul class="clean">
-     <li>Unique link <b>and</b> unique code per affiliate, auto-generated.</li>
-     <li>Product gifting from inventory, with tracking.</li>
-     <li>Automatic payouts on the Shopify bill — twice monthly, $25 minimum, 2.9% on paid commissions.</li>
-     <li>Per-creator analytics: clicks, sales, commissions.</li>
-     <li><b>The gummies live here</b> — the full profit opportunity runs through this rail, Instagram and email.</li>
-    </ul>
-    <div class="goldbox"><h4>On coupon-site codes</h4>
-    <p>Mentioned in the Handbook as bad practice. <b>Not audited, not policed.</b> A code producing sales is producing sales, and the time it would take to chase leaks is better spent recruiting.</p></div>
-   </div>
-  </div>
- </div>
-
- <div class="sec">
-  <h2>WHOP and Zion.</h2>
-  <div class="rule"></div>
-  <div class="two">
-   <div>
-    <h4>WHOP — free until proven</h4>
-    <p>Creating a hub is free and WHOP only takes fees when money moves through it. So we build the whole thing, run it, and spend nothing until a capped test proves a paid campaign is worth it.</p>
-    <div class="tablewrap"><table style="min-width:0">
-     <tr><th>App</th><th>What lives there</th></tr>
-     <tr class="hl"><td><strong>Course</strong></td><td>The 20-minute orientation — products, story, approved language, tier ladder, payouts, ManyChat walkthrough. <b>The highest-value thing on the platform.</b></td></tr>
-     <tr><td><strong>Chat</strong></td><td>The daily room</td></tr>
-     <tr><td><strong>Forum</strong></td><td>Monday leaderboard, call recordings, campaign briefs</td></tr>
-     <tr><td><strong>Events</strong></td><td><b>Where the Thursday affiliate call is hosted</b></td></tr>
-     <tr><td><strong>Challenges</strong></td><td>The monthly campaign brief with hashtag, deadline, prize</td></tr>
-    </table></div>
-    <h4 style="margin-top:22px">If and when we pay</h4>
-    <div class="tablewrap"><table style="min-width:0">
-     <tr><th>Setting</th><th>Proposal</th></tr>
-     <tr class="hl"><td>Rate</td><td class="mono"><b>$3 per 5,000 views</b> (= $0.60/1k)</td></tr>
-     <tr><td>Total budget</td><td class="mono">$250, capped</td></tr>
-     <tr><td>Max per video</td><td class="mono">$40</td></tr>
-     <tr><td>Minimum payout</td><td class="mono">$5 (≈8,300 views)</td></tr>
-     <tr><td>Approval</td><td>Manual, every submission</td></tr>
-    </table></div>
-    <p class="footnote">Well below the earlier $1.50/1k draft — low enough to recruit a large volunteer army rather than a few expensive clippers. <b>The $250 test settles the question:</b> if cost-per-1,000-views comes in under $1 blended and the clips are usable, scale it. If not, WHOP stays free forever and loses nothing.</p>
-   </div>
-   <div>
-    <h4>Zion — the community side</h4>
-    <p>Zion already exists and Antoine already runs it. We're not building a second community — we're giving Supermind a proper presence inside the one we have.</p>
-    <ul class="clean">
-     <li><b>Hikes</b> — posted, promoted, photographed. The most on-brand audience we own.</li>
-     <li><b>Events we run</b> — Breakfast Club mornings, Black on the Block, drop nights.</li>
-     <li><b>Events our people run.</b> When an affiliate hosts something — a real-estate mastermind, a workshop, a dinner — it gets promoted there. <b>This is the reciprocity that makes people stay: we don't just take their content, we fill their rooms.</b></li>
-     <li><b>Product feedback</b> before launches.</li>
-    </ul>
-    <h4 style="margin-top:22px">The division of labour</h4>
-    <div class="tablewrap"><table style="min-width:0">
-     <tr><th>WHOP</th><th>Zion</th></tr>
-     <tr><td>Orientation course</td><td>Hikes and outdoor programming</td></tr>
-     <tr><td>Leaderboard and tier news</td><td>Events, ours and theirs</td></tr>
-     <tr><td>Thursday affiliate call</td><td>Community meetings</td></tr>
-     <tr><td>Challenge briefs</td><td>Product feedback and previews</td></tr>
-     <tr><td>Payout and platform questions</td><td>The wider membership conversation</td></tr>
-    </table></div>
-   </div>
-  </div>
- </div>
-
- <div class="sec">
-  <h2>Instagram and ManyChat.</h2>
-  <div class="rule red"></div>
-  <div class="callout"><h4>The gap this closes</h4>
-  <p>166,000 Instagram views and 615 profile taps in August produced <b>428 website sessions.</b> The audience is there. There is no bridge. ManyChat is the cheapest revenue fix available and it goes in today.</p></div>
-  <div class="two">
-   <div>
-    <ol class="steps">
-     <li><b>Amechi sets it up today</b> through his own account, which already runs the Keys and Supermind ManyChat. Cost reimbursed with September expenses; credentials to the password list same day.</li>
-     <li><b>Three flows first:</b> keyword comment-to-DM sending the shop link; an affiliate keyword sending the application form; a story-reply flow answering the most common product question.</li>
-     <li><b>Every feed post gets a keyword.</b> No prices in the feed — the DM does the converting.</li>
-     <li><b>Teach it to affiliates.</b> The highest-leverage technical upgrade we can hand them, and it's in the orientation course.</li>
-    </ol>
-   </div>
-   <div>
-    <h4>The application funnel</h4>
-    <ol class="steps">
-     <li><b>A branded application page</b> — name, email, phone, handles with follower counts, niche, "why Supermind", where they'll promote, shipping address, two agreement checkboxes.</li>
-     <li><b>Google Apps Script</b> posts every submission into a shared Sheet the whole team can see, timestamped.</li>
-     <li><b>The sheet triggers the welcome email</b> automatically — code, link, handbook, both community invites.</li>
-     <li><b>Columns the team works from:</b> status, tier, code issued, welcome sent, community joined, first post, first sale, owner, notes.</li>
-     <li><b>Celina works the sheet daily</b> in the 10-minute check.</li>
-    </ol>
-   </div>
-  </div>
- </div>
-</section>
-
-<!-- ============ AFFILIATES ============ -->
-<section class="pane" data-pane="affiliates" hidden>
- <div class="kicker">For affiliates · SM-AFF-02</div>
- <h2>The Handbook.</h2>
- <div class="rule"></div>
- <p class="lede">What every affiliate receives. Written to them, not about them — short, warm, and specific about where the money is.</p>
-
- <div class="sec">
-  <h4>The four things we ask every time</h4>
-  <div class="tablewrap"><table>
-   <tr><th>#</th><th>The ask</th><th>Why</th></tr>
-   <tr class="hl"><td class="mono">1</td><td><strong>Post it as a collaborative post with @supermind</strong></td><td>The highest-leverage thing they can do and it costs nothing. Lands on our feed and theirs at once, shares the engagement, puts them in front of our whole audience. <b>We accept whatever is genuinely good</b> — and good means it fits their page, not that it looks like an ad.</td></tr>
-   <tr class="hl"><td class="mono">2</td><td><strong>Tag the brand, always</strong></td><td>Even when it isn't a collab post. It's how we find their work to repost it — and we repost a creator every single day.</td></tr>
-   <tr><td class="mono">3</td><td><strong>Disclose</strong></td><td>"#ad", "commissionable link", or said on camera. It's US law and it protects <b>them</b> personally, not just us.</td></tr>
-   <tr class="hl"><td class="mono">4</td><td><strong>Be yourself about it</strong></td><td>Authenticity is the actual brand value, not a slogan. If a post feels like a paid ad it underperforms and costs trust they can't buy back.</td></tr>
-  </table></div>
-  <div class="goldbox"><h4>Strongly recommended: ManyChat on their own account</h4>
-  <p>The creators earning most aren't posting more — they're <b>capturing more of the people who already engaged.</b> ManyChat auto-replies to comments and sends the link in the DM. Free to start, twenty minutes to set up. We walk them through the exact triggers and DM copy that work for this product. If they take one piece of technical advice from the handbook, it's this one.</p></div>
- </div>
-
- <div class="sec">
-  <h4>Talking about the product without creating a problem</h4>
-  <div class="two">
-   <div>
-    <p>They can talk about how it makes them feel. They can't say it treats a medical condition. That's the whole thing, and the gap is wider than people assume.</p>
-    <p>Brain fog, focus, energy, mornings, how a day goes with it and without it — all fine, and it converts better than anything clinical anyway. What we steer away from is language that sounds like medicine: <b>cures, treats, heals, prevents, fixes</b> a named condition. Not because anyone's coming after them for a passing comment, but because that language quietly makes the post worse — it stops sounding like them and starts sounding like a supplement ad.</p>
-    <p class="footnote">Unsure about a sentence? Send it to the creator inbox. Same-day answer, and nobody gets made to feel silly for asking.</p>
-   </div>
-   <div>
-    <h4>Say this, not that</h4>
-    <div class="tablewrap"><table style="min-width:0">
-     <tr><th>Instead of</th><th>Try</th></tr>
-     <tr><td>"Cures my brain fog"</td><td>"Cuts through the fog for me"</td></tr>
-     <tr><td>"Treats my ADHD"</td><td>"On days my focus is everywhere, this is what I reach for"</td></tr>
-     <tr><td>"Fixes anxiety"</td><td>"Part of how I keep myself steady"</td></tr>
-     <tr><td>"Boosts your immune system"</td><td>"Part of my daily routine"</td></tr>
-     <tr><td>"Clinically proven to…"</td><td>"Here's what the research says about lion's mane" (+ link)</td></tr>
-     <tr><td>"Detoxes your body"</td><td>"How I start my mornings clean"</td></tr>
-     <tr><td>"Will give you energy for hours"</td><td>"I don't get the 2pm crash with this"</td></tr>
-     <tr><td>"Heals your gut"</td><td>"Sits easier on my stomach than regular coffee"</td></tr>
-    </table></div>
-    <p class="footnote">The pattern: move the claim from <b>the product does X</b> to <b>here's what happens for me.</b> Same message, their voice, no exposure.</p>
-   </div>
-  </div>
- </div>
-
- <div class="sec">
-  <h4>Who we're marketing to — and why it helps them</h4>
-  <div class="two">
-   <div>
-    <p class="lede">Supermind is built for <b>Black women who are building something.</b></p>
-    <p>She's 25 to 45. She works, creates, runs something or is about to. She reads. She takes her mornings seriously and she's tired of wellness that talks down to her or costs $400 to participate in. She wants to feel clear, not wired — and she wants the thing she drinks every morning to belong in her life, not feel like a supplement she's forcing down. She isn't looking for a miracle. She's looking for a ritual that's actually good.</p>
-    <p><b>Their audience doesn't have to look like that.</b> Men, other communities, other ages — all welcome, all earning. It means that when they're choosing an angle, she's who the brand is speaking to, and content that speaks to her travels furthest for us.</p>
-   </div>
-   <div>
-    <h4>The brand in five lines, so they can improvise around it</h4>
-    <ul class="clean">
-     <li><b>Cognitive luxury.</b> Composed intelligence is the status symbol. Not hustle — clarity.</li>
-     <li><b>Quiet authority.</b> Restraint, precision, space. We don't shout; neither should the post.</li>
-     <li><b>Ancestral and future at once.</b> Warm archive coffeehouse meets precision laboratory.</li>
-     <li><b>Real light, real materials.</b> Warm practicals over ring light. Texture over filters.</li>
-     <li><b>The colors:</b> oxblood, gold, ivory, deep green. If their frame already has those in it, they're home.</li>
-    </ul>
-    <p class="footnote">One tactical note worth real money: <b>post to feed and Reels, not only Stories.</b> A Story reaches existing followers and disappears in 24 hours. A Reel works for months and reaches people who've never heard of you. Our top-earning affiliate posts daily to Stories — moving that same effort to the feed is the biggest single upgrade available to most of this network.</p>
-   </div>
-  </div>
- </div>
-</section>
-
-<!-- ============ CREATORS ============ -->
-<section class="pane" data-pane="creators" hidden>
- <div class="kicker">Engine One · SM-AFF-05</div>
- <h2>Creator growth collaborations.</h2>
- <div class="rule"></div>
- <p class="lede">The filter that matters most: <b>we're looking for people who make content and run things</b> — not a celebrity roster. Someone with 40,000 followers who films every week and hosts real events is worth more to us than a name with two million who posts twice a year.</p>
-
- <div class="goldbox"><h4>The thread worth pulling first</h4>
- <p><b>19 Keys is already an investor in Sensori</b> — a Black women-owned functional beverage brand whose seed round names Block/Square, Johnson &amp; Johnson and 19keys. That single fact links a peer brand, a warm introduction, and capital-level conviction in this exact category — and through the EYL Network it connects to Invest Fest and to Keys' own show. One relationship, four doors.</p></div>
-
- <div class="sec">
-  <h4>Media platforms and shows</h4>
-  <div class="tablewrap"><table>
-   <tr><th>Name</th><th>What it is</th><th>Why it matters</th><th>The ask</th></tr>
-   <tr class="hl"><td><strong>EYL / Earn Your Leisure</strong><br><span class="mono">Invest Fest</span></td><td>Rashad Bilal and Troy Millings. <b>1.684M YouTube subscribers, 4.12% engagement.</b> Invest Fest 2026 drew a <b>record 31,000 attendees</b> over three days in Atlanta, Serena Williams as first female headliner, $250,000 distributed through the pitch competition.</td><td><b>We already have the receipt.</b> Supermind netted $12,825 at Invest Fest — more than the whole month's Shopify revenue — plus 12 affiliate inquiries. A proven channel, not a cold lead.</td><td><b>Book the 2027 activation now.</b> Their YouTube growth is flat (0.06% over 30 days), so prioritise the <b>event</b> over channel integrations. Confirm the 2027 host city first — Atlanta is not guaranteed.</td></tr>
-   <tr class="hl"><td><strong>High Level Conversations</strong><br><span class="mono">19 Keys' own show</span></td><td>Keys' podcast — ~490 episodes over nine years, publishing several times a week. <b>4.9 out of 5 from 2,726 Apple ratings</b>, #244 in US Education/Self-Improvement. Runs <b>under the EYL Network umbrella</b>, plus the ticketed "Highest Level Tour."</td><td>The warmest asset we own. The audience psychographic — wealth-building, sovereignty, wellness — is close to a perfect match, and Keys controls it outright.</td><td><b>Mine the guest archive for the target list.</b> Verified guests include Vic Mensa, Joey Bada$$, Van Lathan, Dr. Boyce Watkins, Chaka Bars, AJ McQueen, Keenan Beasley, Julian Brown. <b>Keys should pull the full episode list</b> — a warm-intro pool nobody else can access.</td></tr>
-   <tr><td><strong>Vic Mensa</strong></td><td>Launched <b>The Vic Mensa Show</b> August 26, 2026 — weekly, 24 episodes in season one, with Mass Appeal. Extends his Orange Tree series, a <b>2026 Webby People's Voice winner</b>. Guests include Chance the Rapper, Lena Waithe, Rapsody, Aja Monet. Founder of 93 Boyz, Illinois' first Black-owned cannabis company.</td><td>A brand-new weekly show with a real distribution partner — ground-floor integration before rates harden. <b>He has already appeared on High Level Conversations</b>, so the introduction exists.</td><td>Show integration or collaboration. From Keys, founder to founder. He's an operator, not a paid-post influencer — the ask should carry ownership or a cause component.</td></tr>
-  </table></div>
- </div>
-
- <div class="sec">
-  <h4>Peer brand — co-marketing, not a gift box</h4>
-  <div class="tablewrap"><table>
-   <tr><th>Name</th><th>What it is</th><th>The read</th></tr>
-   <tr class="hl"><td><strong>Sensori</strong></td><td>Black women-owned functional non-alcoholic beverage brand — mushrooms, adaptogens and nootropics including lion's mane, ashwagandha and reishi. Founded 2024 by Shanna Pearre, Darean Rhodes and Ashlyn Knox out of a yearly Dry January tradition. Crossed <b>$100,000 revenue in Q1 2026</b>, in 20+ boutique wellness locations. Brought on Jacqueline Harrill — formerly VP of sales ops at <b>Poppi</b>, where she helped take revenue from $20M to $400M before the $1.95B PepsiCo acquisition.</td><td><b>Not a creator target — and Keys is already an investor.</b> Coffee and evening NA beverages are <b>adjacent, not competing</b> — different dayparts entirely — which makes a collaboration genuinely viable. Their Poppi-veteran advisor and boutique-wellness retail relationships are the real assets. <b>Approach as co-marketing, shared retail introductions, or a joint activation.</b></td></tr>
-  </table></div>
- </div>
-
- <div class="sec">
-  <h4>Communities and organisations</h4>
-  <div class="tablewrap"><table>
-   <tr><th>Name</th><th>Scale</th><th>Why them</th><th>The ask</th></tr>
-   <tr><td><strong>GirlTrek</strong></td><td class="mono">1.5M members</td><td>The largest nonprofit for Black women's health in the country, with a stated mission to raise Black women's life expectancy by ten years in ten years. A longevity organisation at scale — and walking is a morning ritual.</td><td>Morning-walk sponsorship, product at walks, co-created content.</td></tr>
-   <tr class="hl"><td><strong>Sober Black Girls Club</strong></td><td class="mono">501(c)(3)</td><td>Founded by Khadi A. Oluwatoyin. Three recurring weekly virtual meetings, a private community, workshops, a fall retreat, Dry January programming. Publishes a partnerships inbox.</td><td><b>Open the conversation in October to land Dry January 2027.</b> The sober-curious lane is wide open and "what I drink instead" is our natural territory.</td></tr>
-   <tr><td><strong>Transparent Black Girl</strong></td><td class="mono">110K · 5.05% ER</td><td>A wellness collective built specifically for Black women. <b>The best audience precision of anything on this page.</b></td><td>Collab pack, co-created content, community activation.</td></tr>
-  </table></div>
- </div>
-
- <div class="sec">
-  <h4>Creators — people who make things</h4>
-  <div class="tablewrap"><table>
-   <tr><th>Name</th><th>Lane</th><th>Why them</th><th>Instrument</th></tr>
-   <tr class="hl"><td><strong>Flau'jae Johnson</strong></td><td>Athlete + artist</td><td>Drafted <b>8th overall in the 2026 WNBA draft</b>, now in her rookie season with the Seattle Storm after three seasons at LSU and a national title. Roc Nation recording artist, three albums. <b>Already has beverage-endorsement experience</b> through a national Powerade NIL deal — and, the useful part, <b>took equity rather than cash in Unrivaled</b>, so she's receptive to ownership structures. Publicly discusses journaling and morning prayer as non-negotiables.</td><td>Partnership conversation. Check WNBA sponsorship rules and Powerade category exclusivity first.</td></tr>
-   <tr><td><strong>BIA</strong></td><td>Music</td><td>Epic Records. Debut album <b>BIANCA</b> released October 2025 with a deluxe edition since — an active promotional cycle is useful timing leverage. Opened for Nicki Minaj's Pink Friday 2 tour. Launched <b>Beauty for Certain</b>, a makeup line, so she's fronted and operated a consumer product before.</td><td>Reach play rather than a credibility play — <b>no existing wellness signal to build on.</b> Gift box first.</td></tr>
-   <tr><td><strong>Jackie Aina</strong></td><td>Beauty</td><td>Co-founder of FORVR Mood. An operating founder — expect a founder-level conversation rather than a rate card.</td><td>Gift box → partnership</td></tr>
-   <tr><td><strong>Ally Love</strong></td><td>Fitness</td><td>Peloton instructor and founder of Love Squad. Runs a community, not just an account.</td><td>Gift box → collab pack</td></tr>
-   <tr><td><strong>Lita Lewis</strong></td><td>Fitness</td><td>Trainer; fitness and motherhood crossover. Consistent output.</td><td>Gift box</td></tr>
-   <tr><td><strong>Latham Thomas</strong></td><td>Motherhood + wellness</td><td>Founder of <b>Mama Glow</b>, a doula training network — she brings an institution and a professional network, not just reach.</td><td>Gift box → partnership</td></tr>
-   <tr><td><strong>Jenné Claiborne</strong></td><td>Food</td><td>Plant-based recipes, long-tenured, health-forward. Recipes are the highest-value UGC we can request.</td><td>Gift box</td></tr>
-   <tr><td><strong>Clever Girl Finance</strong></td><td>Business</td><td>Personal finance for women, founded by Bola Sokunbi. The ambition lane is where Invest Fest already proved we convert.</td><td>Gift box → collab pack</td></tr>
-  </table></div>
-  <p class="footnote">The list is deliberately short — a tranche of fifteen with real intent behind each name beats a roster of fifty we never contact. Fill the remaining slots each month from Keys' contacts and the High Level Conversations guest archive.</p>
- </div>
-
- <div class="sec">
-  <h4>What the market pays, and what to check</h4>
-  <div class="two">
-   <div>
-    <div class="tablewrap"><table style="min-width:0">
-     <tr><th>Tier</th><th>Per post</th></tr>
-     <tr><td>100K–500K, Instagram</td><td class="mono">$1,250–$5,000 (plan against this)</td></tr>
-     <tr><td>Same tier, agency-represented</td><td class="mono">$5,000–$20,000</td></tr>
-     <tr><td>YouTube dedicated video</td><td class="mono">$10,000+</td></tr>
-    </table></div>
-    <p class="footnote">Negotiate separately — these inflate quotes fast: usage rights (+20–30%), category exclusivity (+15–25%), rush (+20–50%).</p>
-    <p><b>On gifting:</b> seeding converts below roughly 100K. Above it, gifting alone won't close anyone — use it to seed the micro tier and to trial affiliates before promoting them into paid deals.</p>
-    <p><b>What the market is buying in 2026:</b> 6–12 month ambassadorships with a purpose component, not one-off posts. Olly signed Naomi Osaka to twelve months with a $1.5M mental-health grant. A single paid post will underperform against that.</p>
-   </div>
-   <div>
-    <h4>Flags before spending</h4>
-    <div class="tablewrap"><table style="min-width:0">
-     <tr><th>#</th><th>Flag</th></tr>
-     <tr class="hl"><td class="mono">1</td><td><b>Follower counts for Flau'jae, BIA, Vic Mensa and Keys could not be independently verified</b> — Instagram and TikTok block automated access. Flau'jae's widely-quoted 3.1M aggregate is from January 2024 and is certainly stale. Pull current numbers manually before quoting anything externally.</td></tr>
-     <tr><td class="mono">2</td><td><b>Sensori's recent funding rounds are unresolved</b> — a $500K creator round and a $3.5M institutional round both had target dates that have passed with no reported outcome. Ask Keys directly; he's an investor.</td></tr>
-     <tr><td class="mono">3</td><td><b>Invest Fest 2027's host city is not confirmed.</b> Confirm before committing budget.</td></tr>
-     <tr><td class="mono">4</td><td><b>Flau'jae's WNBA rookie season</b> brings league sponsorship-conflict rules and possible Powerade category exclusivity.</td></tr>
-     <tr><td class="mono">5</td><td><b>Vic Mensa's cannabis venture</b> is a brand-safety judgment call, not a factual problem. Decide deliberately rather than discovering it late.</td></tr>
-     <tr><td class="mono">6</td><td><b>No pricing comparables exist</b> for a functional-coffee creator deal. The first three deals set our own market — structure them short and renewable.</td></tr>
-    </table></div>
-   </div>
-  </div>
- </div>
-</section>
-
-<!-- ============ NEWSLETTER ============ -->
-<section class="pane" data-pane="newsletter" hidden>
- <div class="kicker">SM-AFF-06</div>
- <h2>Newsletter strategy and voice.</h2>
- <div class="rule"></div>
- <p class="lede">Three jobs, in this order: <b>keep 163 subscribers subscribed, recruit affiliates, sell product.</b> Most brand newsletters invert that and become a coupon feed nobody opens.</p>
- <div class="goldbox"><h4>The test for every issue before it goes</h4>
- <p>Would she forward this to one friend? If the honest answer is no, it's a product announcement wearing a newsletter's clothes and it goes back for another pass.</p></div>
-
- <div class="sec">
-  <h4>The six pillars</h4>
-  <div class="tablewrap"><table>
-   <tr><th>Pillar</th><th>What it covers</th><th>Example topics</th></tr>
-   <tr class="hl"><td><strong>01 · The Science</strong></td><td>Ingredients, mechanisms, cognition, longevity. The depth that earns the price.</td><td>What lion's mane actually does · Why the 2pm crash happens · Blue zones · Sleep architecture</td></tr>
-   <tr><td><strong>02 · The World</strong></td><td>Where we've been and what we saw. Travel, sourcing, culture.</td><td>The Africa trip · How cacao is grown · Coffee's origin story, told properly</td></tr>
-   <tr><td><strong>03 · The Founder's Desk</strong></td><td>Keys' voice, unfiltered. What he's thinking, building, reading.</td><td>Why he built a coffee company · What sovereignty means in business · What he's reading</td></tr>
-   <tr><td><strong>04 · The Product</strong></td><td>Drops, how to use it, recipes, the vessel system. Merchandising that reads as service.</td><td>Four ways to make it · Which vessel for which morning · The collagen coffee, explained</td></tr>
-   <tr><td><strong>05 · The Practice</strong></td><td>Everyday wellness. Rituals, focus, movement, recovery.</td><td>The first hour · Protecting your attention · What to do about the afternoon</td></tr>
-   <tr class="hl"><td><strong>06 · The Network</strong></td><td>Affiliate stories, member spotlights. <b>The recruiting engine.</b></td><td>How she earns her subscription back · A member's morning · Inside a gift box</td></tr>
-  </table></div>
-  <div class="tablewrap"><table>
-   <tr><th></th><th>Monday</th><th>Wednesday</th><th>Friday</th></tr>
-   <tr><td><strong>Week 1</strong></td><td>The Science</td><td>The Practice</td><td>The Network</td></tr>
-   <tr><td><strong>Week 2</strong></td><td>The Founder's Desk</td><td>The Product</td><td>The World</td></tr>
-   <tr><td><strong>Week 3</strong></td><td>The Science</td><td>The Practice</td><td>The Network</td></tr>
-   <tr><td><strong>Week 4</strong></td><td>The World</td><td>The Product</td><td>The Founder's Desk</td></tr>
-  </table></div>
-  <p class="footnote">Keys' rule: batch a month in one session and drip them. Whoever sends one schedules the next four. <b>Weekly cadence decays into monthly the first week somebody is busy</b> — three a week with a month in the bank does not.</p>
- </div>
-
- <div class="sec">
-  <h4>The voice — built from four sources</h4>
-  <div class="grid g4">
-   <div class="card"><span class="n">40%</span><h3>Anima Mundi</h3><p>Depth with soul. Botanical and scientific detail delivered with reverence, not clinical distance.</p></div>
-   <div class="card"><span class="n">25%</span><h3>David</h3><p>Structural rigor. Credibility through citation, comparison and plain numbers.</p></div>
-   <div class="card"><span class="n">20%</span><h3>Chamberlain</h3><p>Warm competence. Practical, unpretentious, genuinely useful.</p></div>
-   <div class="card"><span class="n">15%</span><h3>19 Keys</h3><p>The register. Sovereignty, frequency, building, ownership, ancestral intelligence.</p></div>
-  </div>
-  <div class="tablewrap"><table>
-   <tr><th>Reference</th><th>What to take</th><th>What NOT to take</th></tr>
-   <tr><td><strong>Anima Mundi Herbals</strong></td><td>Group ingredients by <b>the job they do</b>, in plain-language section names. Real citations under mystical framing. Own a piece of contested history once a quarter.</td><td>Astrology. The all-caps typographic tic. Their 2,500-word length.</td></tr>
-   <tr><td><strong>David — The Column</strong></td><td>The <b>comparison table where our product is one honest row.</b> A coined metric we can own. "Key Takeaways" up top. One wry human line at the end.</td><td>The flat, anecdote-free openings. Fully clinical register — we're warmer.</td></tr>
-   <tr><td><strong>Chamberlain Coffee</strong></td><td>Renaming the FAQ to <b>"Questions People Actually Ask."</b> A <b>"Best for:"</b> line closing each option. A "before you start" section naming what ruins the result.</td><td>The near-duplicate SEO filler tier. Overusing "actually."</td></tr>
-   <tr class="hl"><td><strong>19 Keys — the 15%</strong></td><td>Vocabulary and frames: sovereignty, ownership, frequency, building, composure as power. One or two per issue, placed where they land.</td><td>Don't overdo it. At 50% it becomes a different brand's newsletter.</td></tr>
-  </table></div>
- </div>
-
- <div class="sec">
-  <h4>Rules of the voice</h4>
-  <div class="two">
-   <div>
-    <h4>Always</h4>
-    <ul class="clean">
-     <li><b>Lead with something true and specific.</b> A number, an observation, a moment. Not "In today's fast-paced world."</li>
-     <li><b>Short paragraphs.</b> One to three sentences.</li>
-     <li><b>Speak to "you."</b> Singular. One reader.</li>
-     <li><b>Cite the science when you invoke it.</b> A link beats an adjective.</li>
-     <li><b>Name real things.</b> The 8 oz coffee, the oxblood vessel, Ethiopia, 6am.</li>
-     <li><b>One clear next thing</b> at the end.</li>
-    </ul>
-   </div>
-   <div>
-    <h4>Never</h4>
-    <ul class="clean">
-     <li><b>Buzzwords.</b> Game-changing, revolutionary, unlock, elevate, curated, journey.</li>
-     <li><b>"Imagine if you…"</b> Tell them what's real.</li>
-     <li><b>Event recaps as the body.</b> A hike photo belongs in a Practice issue about walking.</li>
-     <li><b>Treatment claims.</b> Same rules as affiliates.</li>
-     <li><b>More than one call to action.</b></li>
-     <li><b>Exclamation marks.</b> Quiet authority doesn't shout.</li>
-    </ul>
-   </div>
-  </div>
-  <div class="tablewrap"><table>
-   <tr><th>Block</th><th>Length</th><th>What it does</th></tr>
-   <tr><td><strong>Subject line</strong></td><td class="mono">4–8 words</td><td>Specific and concrete. Write five, pick one.</td></tr>
-   <tr><td><strong>Standard open</strong></td><td class="mono">1 line</td><td>Consistent greeting so the issue is recognisable in three words.</td></tr>
-   <tr><td><strong>The hook</strong></td><td class="mono">2–3 sentences</td><td>The true specific thing.</td></tr>
-   <tr class="hl"><td><strong>The body</strong></td><td class="mono">350–500 words</td><td>One idea, developed. This is the value.</td></tr>
-   <tr><td><strong>The practical turn</strong></td><td class="mono">50–100 words</td><td>What to do with what they just read.</td></tr>
-   <tr class="hl"><td><strong>The Network slot</strong></td><td class="mono">80–120 words</td><td><b>An affiliate story, every issue.</b> Who they are, how they started, what it does for them, and a link to join.</td></tr>
-  </table></div>
-  <p class="footnote">Total 550–750 words. Long enough to be worth opening, short enough to finish on a phone before the coffee goes cold.</p>
- </div>
-
- <div class="sec">
-  <h4>How three a week actually happens</h4>
-  <div class="two">
-   <div>
-    <p class="lede">Nobody writes three original newsletters a week from a blank page. The workflow: <b>Keys talks, AI structures, a human edits, Pam schedules four ahead.</b></p>
-    <ol class="steps">
-     <li><b>Keys records raw voice notes</b> — twelve topics, 3–5 minutes each, unstructured. This is the human input the whole process depends on; skip it and the output is slop.</li>
-     <li><b>Amechi assigns each topic to a pillar</b> and drops the transcripts in the Claude project.</li>
-     <li><b>Claude drafts all twelve.</b></li>
-     <li><b>A human edits every one.</b> Non-negotiable.</li>
-     <li><b>Pam builds and schedules</b> the month on the Edition 02 template.</li>
-     <li><b>The Network slot is written last</b>, per issue — Celina supplies one story a week from her Thursday follow-ups.</li>
-    </ol>
-   </div>
-   <div>
-    <h4>The Claude project — four knowledge files</h4>
-    <div class="tablewrap"><table style="min-width:0">
-     <tr><th>File</th><th>What's in it</th></tr>
-     <tr class="hl"><td><strong>1 · Writing samples</strong></td><td><b>The most important one.</b> Keys' best posts, the strongest issues once we have them, reference excerpts marked as reference.</td></tr>
-     <tr><td><strong>2 · Audience</strong></td><td>The reader description, plus what we know about the 163 subscribers.</td></tr>
-     <tr><td><strong>3 · Products &amp; offers</strong></td><td>Every SKU, price, who it's for, the affiliate offer and tiers. Makes the closing ask specific instead of generic.</td></tr>
-     <tr><td><strong>4 · Brand guide</strong></td><td>World Bible Edition 02 plus this document.</td></tr>
-    </table></div>
-    <p class="footnote">The full project instructions — voice blend, structure, rules and quality checklist — are in SM-AFF-06, ready to paste.</p>
-   </div>
-  </div>
- </div>
-
- <div class="sec">
-  <h4>The first month</h4>
-  <div class="tablewrap"><table>
-   <tr><th>#</th><th>Pillar</th><th>Working title</th><th>The ask</th></tr>
-   <tr class="hl"><td class="mono">1</td><td>Founder's Desk</td><td>Why I Built a Coffee Company</td><td>Subscribe / shop</td></tr>
-   <tr><td class="mono">2</td><td>The Science</td><td>Your 2pm Crash Isn't About Caffeine</td><td>Shop</td></tr>
-   <tr class="hl"><td class="mono">3</td><td>The Network</td><td>How She Earns Her Subscription Back</td><td><b>Become an affiliate</b></td></tr>
-   <tr><td class="mono">4</td><td>The Practice</td><td>The First Hour</td><td>The First Hour challenge</td></tr>
-   <tr><td class="mono">5</td><td>The Product</td><td>Four Ways to Make It</td><td>Recipe challenge</td></tr>
-   <tr><td class="mono">6</td><td>The World</td><td>What We Found in Ethiopia</td><td>Subscribe</td></tr>
-   <tr><td class="mono">7–12</td><td>Rotating</td><td>Lion's mane research · Protecting your attention · Inside a gift box · What I'm reading · Which vessel · How cacao grows</td><td>Mixed</td></tr>
-  </table></div>
-  <div class="two">
-   <div>
-    <h4>Measurement</h4>
-    <div class="tablewrap"><table style="min-width:0">
-     <tr><th>Metric</th><th>By Dec 1</th></tr>
-     <tr><td>Sends per week</td><td class="mono">3, consistently</td></tr>
-     <tr><td>Open rate</td><td class="mono">35%+</td></tr>
-     <tr><td>List size</td><td class="mono">163 → 600</td></tr>
-     <tr class="hl"><td><strong>Affiliates recruited from the Network slot</strong></td><td class="mono"><b>25+</b></td></tr>
-     <tr><td>Issues always queued ahead</td><td class="mono">4 minimum</td></tr>
-    </table></div>
-   </div>
-   <div>
-    <h4>Before issue one</h4>
-    <ul class="clean check">
-     <li>Edition 02 template built — new colors, wordmark, photography</li>
-     <li>New product and lifestyle photography shot (Amechi)</li>
-     <li>Claude project created with all four knowledge files</li>
-     <li>Keys' first voice-note batch recorded</li>
-     <li>Standard open line and sign-off chosen and locked</li>
-     <li>First affiliate story captured</li>
-    </ul>
-   </div>
-  </div>
- </div>
-</section>
-
-<!-- ============ AI UGC ============ -->
-<section class="pane" data-pane="aiugc" hidden>
- <div class="kicker">SM-AFF-07</div>
- <h2>AI UGC — show them what good looks like.</h2>
- <div class="rule"></div>
- <p class="lede">The hardest part of running a creator program isn't recruiting. It's that a new affiliate opens the app, points the camera at a coffee bag, and has no idea what we want. Telling them "be authentic" is true and completely useless on its own. Showing them fifteen examples closes that gap in thirty seconds.</p>
- <p>Producing fifteen real examples with real people costs thousands and takes weeks. Producing them with AI costs almost nothing and takes an afternoon — which means we can make them <b>specific to each lane</b>: one set for the fitness creator, one for the recipe creator, one for the woman filming her first hour before work.</p>
-
- <div class="sec">
-  <div class="two">
-   <div>
-    <h4>The four uses, ranked</h4>
-    <div class="tablewrap"><table style="min-width:0">
-     <tr><th>Use</th><th>Value</th></tr>
-     <tr class="hl"><td><strong>1 · Reference library for affiliates</strong></td><td><b>Highest.</b> Sent with the welcome email, built into the orientation course. Fully internal — no governance question at all.</td></tr>
-     <tr><td><strong>2 · Product and still-life</strong></td><td>High. Packaging on marble, the pour, the vessel in a green room. No people, no risk.</td></tr>
-     <tr><td><strong>3 · Ambient b-roll</strong></td><td>High. Coffeehouse interiors, morning light, trail scenes. Backdrop for text posts and newsletter headers.</td></tr>
-     <tr><td><strong>4 · UGC-style with people</strong></td><td><b>Highest reach, and the one with a decision attached.</b></td></tr>
-    </table></div>
-    <h4 style="margin-top:22px">The first batch — 20 assets, one session</h4>
-    <div class="tablewrap"><table style="min-width:0">
-     <tr><th>Set</th><th>Count</th><th>What</th></tr>
-     <tr><td><strong>The First Hour</strong></td><td class="mono">5</td><td>A woman's morning: the pour, the notebook, light coming up, the first sip, the desk</td></tr>
-     <tr><td><strong>Product still-life</strong></td><td class="mono">4</td><td>Pouch on green marble, gold vessel with olive shadow, chocolate broken open, vessel lineup</td></tr>
-     <tr><td><strong>The Recipe</strong></td><td class="mono">3</td><td>Iced build, cacao preparation, chocolate in a dish</td></tr>
-     <tr><td><strong>Ritual in motion</strong></td><td class="mono">4</td><td>Trail at golden hour, gym before the session, long table, evening wind-down</td></tr>
-     <tr><td><strong>Environments</strong></td><td class="mono">4</td><td>Coffeehouse interior, plant-filled room, marble counter, bonfire at dusk</td></tr>
-    </table></div>
-   </div>
-   <div>
-    <div class="callout"><h4>The decision before anything publishes</h4>
-    <p><b>World Bible Edition 02 says generated imagery is internal art direction unless a publishable tier is agreed with Keys, and that synthetic humans presented as real people should not publish.</b> The most useful version of this campaign sits directly against that rule as written. That's not a reason to abandon it — it's a reason to get the rule updated deliberately rather than quietly breaking it.</p></div>
-    <div class="tablewrap"><table style="min-width:0">
-     <tr><th></th><th>Track A — build now</th><th>Track B — needs sign-off</th></tr>
-     <tr><td><strong>What</strong></td><td>Reference library, still-life, environments, b-roll. People may appear but nothing claims to be a testimonial.</td><td>UGC-style content where a generated person appears to be a real customer.</td></tr>
-     <tr><td><strong>Governance</strong></td><td>Fully allowed today.</td><td>Requires Keys to agree a publishable tier and a disclosure position.</td></tr>
-     <tr><td><strong>Start</strong></td><td><b>This month.</b></td><td>After the Keys session.</td></tr>
-    </table></div>
-    <h4 style="margin-top:22px">The two risks worth naming</h4>
-    <ul class="clean">
-     <li><b>The endorsement problem.</b> A generated person presented as a customer describing their experience is a testimonial from someone who doesn't exist. Product scenes and lifestyle b-roll aren't endorsements; a face saying "this changed my mornings" is.</li>
-     <li><b>The brand problem, which is bigger.</b> Authenticity is the value we ask every affiliate to lead with. If our own feed is synthetic people performing sincerity, that's the story if anyone notices — and the audience most likely to notice is the one we're trying to win.</li>
-    </ul>
-    <p class="footnote"><b>Recommendation:</b> build Track A immediately — most of the value, none of the exposure. Bring Track B to Keys as a specific proposal with examples in hand, not an abstract question. If he wants it: generated people in <b>lifestyle scenes, not testimonials</b>, no first-person claims from any generated face, an AI-assisted label where it could read as real, and real people carrying every testimonial.</p>
-   </div>
-  </div>
- </div>
-
- <div class="sec">
-  <h4>Production rules and where the library gets used</h4>
-  <div class="two">
-   <div>
-    <ul class="clean">
-     <li><b>Never let a model draw the wordmark.</b> Generate without packaging text, composite the real mark in post. A hallucinated logo is the fastest way to look fake.</li>
-     <li><b>One committed light source.</b> Warm practicals for archive scenes, natural daylight for living scenes.</li>
-     <li><b>Shadows lean warm brown and burgundy,</b> never grey.</li>
-     <li><b>One intentional idea per frame.</b> Clutter reads as AI.</li>
-     <li><b>Casting leads with Black women, 25–45</b> — composed, put-together, natural skin texture, real hair, relaxed authority rather than excitement.</li>
-     <li><b>Every asset tagged</b> internal reference or approved for publication, in the filename. No exceptions.</li>
-    </ul>
-   </div>
-   <div>
-    <div class="tablewrap"><table style="min-width:0">
-     <tr><th>Where</th><th>How</th></tr>
-     <tr class="hl"><td><strong>The welcome email</strong></td><td>"Here's what a good Supermind post looks like" — five frames matched to their lane. The highest-impact placement.</td></tr>
-     <tr><td><strong>Orientation course</strong></td><td>A module per visual mode, with reference stills beside the explanation.</td></tr>
-     <tr><td><strong>Challenge briefs</strong></td><td>Every challenge ships with three reference frames.</td></tr>
-     <tr><td><strong>Newsletter headers</strong></td><td>Environment and still-life assets as issue art.</td></tr>
-     <tr><td><strong>Instagram grid fill</strong></td><td>Product and environment posts between creator reposts.</td></tr>
-     <tr><td><strong>Partnership decks</strong></td><td>Showing a prospect what a collaboration would look like before anything is shot.</td></tr>
-    </table></div>
-   </div>
-  </div>
- </div>
-</section>
-
-<!-- ============ CALENDAR ============ -->
-<section class="pane" data-pane="calendar" hidden>
- <div class="kicker">SM-AFF-09</div>
- <h2>The Supermind calendar.</h2>
- <div class="rule"></div>
- <div class="goldbox"><h4>The rule that makes a calendar work</h4>
- <p>A date on the calendar isn't the deadline — <b>the lead time is.</b> Every row below carries a "start by" date, and that's what goes in the shared calendar as a task with an owner. The event date goes in as an all-day marker so nobody is surprised by it. <b>A date with no name attached is a wish.</b></p></div>
-
- <div class="sec">
-  <h4>The recurring rhythm</h4>
-  <div class="two">
-   <div>
-    <div class="tablewrap"><table style="min-width:0">
-     <tr><th>Day</th><th>What</th></tr>
-     <tr><td><strong>Daily</strong></td><td>10-minute affiliate check — 5 AM, 5 PM</td></tr>
-     <tr><td><strong>Mon</strong></td><td>Newsletter · scoreboard line · payout verification · leaderboard</td></tr>
-     <tr class="hl"><td><strong>Tue</strong></td><td><b>Growth Initiative call</b> — 15-min affiliate block</td></tr>
-     <tr><td><strong>Tue/Wed</strong></td><td>Celina × Amechi deep work, 90 min</td></tr>
-     <tr><td><strong>Wed</strong></td><td>Newsletter · platform ops · boxes ship</td></tr>
-     <tr class="hl"><td><strong>Thu</strong></td><td><b>Affiliate Connect call</b>, 30 min in WHOP · fulfillment · one affiliate story collected</td></tr>
-     <tr><td><strong>Fri</strong></td><td>Newsletter · weekly one-pager · next tranche drafted</td></tr>
-    </table></div>
-   </div>
-   <div>
-    <div class="tablewrap"><table style="min-width:0">
-     <tr><th>Monthly</th><th>What</th></tr>
-     <tr><td><strong>First Monday</strong></td><td>Tier review against 30-day rolling totals</td></tr>
-     <tr><td><strong>First Tuesday</strong></td><td>Board line</td></tr>
-     <tr><td><strong>Week 1 Fri</strong></td><td>Next tranche drafted, sent to Keys</td></tr>
-     <tr><td><strong>Week 2</strong></td><td>Keys' packing session filmed · newsletter voice notes · tranche ships · AI UGC production</td></tr>
-     <tr><td><strong>Week 3</strong></td><td>New monthly challenge launches</td></tr>
-     <tr><td><strong>Week 4</strong></td><td>Next month's newsletters drafted and scheduled</td></tr>
-    </table></div>
-    <p class="footnote"><b>Quarterly:</b> product seeding to all Creator-tier and above · one flagship long-form piece · docu-profile production · platform review · target-list refresh.</p>
-   </div>
-  </div>
- </div>
-
- <div class="sec">
-  <h4>Q4 2026 — the quarter that decides the year</h4>
-  <div class="tablewrap"><table>
-   <tr><th>Date</th><th>What</th><th>Why it matters</th><th>Start by</th></tr>
-   <tr class="hl"><td><strong>Sept 15</strong></td><td>Media budget deadline · TikTok Shop live</td><td>$2,500 use-or-lose. The whole sprint points here.</td><td class="mono">Now</td></tr>
-   <tr><td><strong>Sept 29 – Oct 1</strong></td><td>National Coffee Day · International Coffee Day</td><td>An ownable moment. Run them as one week-long campaign, not two.</td><td class="mono">Sept 8</td></tr>
-   <tr><td><strong>Oct 10</strong></td><td>World Mental Health Day</td><td>The cognitive-wellness position, handled carefully. Education, never treatment claims.</td><td class="mono">Sept 20</td></tr>
-   <tr><td><strong>Oct 20</strong></td><td>Black on the Block, second date</td><td>Second activation</td><td class="mono">Sept 25</td></tr>
-   <tr class="hl"><td><strong>Nov 1</strong></td><td><b>Samples in creators' hands</b></td><td>The most time-sensitive date in the system. Miss it and Q4 halves.</td><td class="mono">Oct 10</td></tr>
-   <tr class="hl"><td><strong>Before Black Friday</strong></td><td><b>Collagen coffee launch</b></td><td>The women's formula and the campaign the audience pivot is built around.</td><td class="mono">Oct 1</td></tr>
-   <tr><td><strong>Nov 22–24</strong></td><td>TikTok Wellness deal days</td><td>Creators ramping to 3+ shoppable videos a day</td><td class="mono">Oct 15</td></tr>
-   <tr class="hl"><td><strong>Nov 27</strong></td><td><b>Black Friday</b></td><td>Biggest commerce day. Bundles under $30 for gifting.</td><td class="mono">Oct 15</td></tr>
-   <tr><td><strong>Nov 28</strong></td><td>Small Business Saturday</td><td>Black-owned small business framing. Strong PR moment.</td><td class="mono">Nov 1</td></tr>
-   <tr><td><strong>Dec 8–12</strong></td><td>Shipping cutoffs</td><td>Publish our own cutoffs. Gift-guide content peaks.</td><td class="mono">Nov 10</td></tr>
-   <tr><td><strong>Dec 26 – Jan 1</strong></td><td>The reset week</td><td>Highest-intent week of the year for a wellness ritual product. <b>Do not go quiet.</b></td><td class="mono">Dec 1</td></tr>
-  </table></div>
- </div>
-
- <div class="sec">
-  <h4>2027 — the annual brand calendar</h4>
-  <div class="tablewrap"><table>
-   <tr><th>Month</th><th>Moments</th><th>Our angle</th><th>Start by</th></tr>
-   <tr class="hl"><td><strong>January</strong></td><td><b>Dry January</b> · New year reset · MLK Day</td><td><b>The biggest owned moment of our year.</b> "What I drink instead" is our natural territory and the sober-curious lane is wide open. Sober Black Girls Club partnership lands here — which is why the conversation opens in October.</td><td class="mono">Oct 2026</td></tr>
-   <tr><td><strong>February</strong></td><td><b>Black History Month</b> · Valentine's</td><td>Founder story, origin, the history of coffee told properly. The flagship essay belongs here.</td><td class="mono">Dec 2026</td></tr>
-   <tr class="hl"><td><strong>March</strong></td><td><b>Women's History Month</b> · International Women's Day</td><td><b>The month the audience pivot pays off.</b> Every Tier A and B woman, one campaign. Mariah front and centre.</td><td class="mono">Jan 2027</td></tr>
-   <tr><td><strong>April</strong></td><td>Stress Awareness · Earth Day · Ramadan / Eid</td><td>Cognitive load and composure. Sourcing. Pre-dawn ritual content is genuinely on-brand.</td><td class="mono">Feb 2027</td></tr>
-   <tr><td><strong>May</strong></td><td><b>Mental Health Awareness Month</b> · Mother's Day</td><td>The category's proven moment — Olly launched Naomi Osaka here.</td><td class="mono">Mar 2027</td></tr>
-   <tr><td><strong>June</strong></td><td><b>Juneteenth</b> · Pride · Solstice</td><td>Ownership and freedom — the Keys register at full strength. Hikes, Breakfast Club outdoors.</td><td class="mono">Apr 2027</td></tr>
-   <tr><td><strong>July</strong></td><td>Summer · ESSENCE Festival</td><td>The Essence relationship compounds here if the marketplace application lands.</td><td class="mono">May 2027</td></tr>
-   <tr class="hl"><td><strong>August</strong></td><td><b>Black Business Month</b> · <b>Invest Fest</b></td><td>Invest Fest netted $12,825 in 2026 — more than the whole month's Shopify revenue. <b>Book the 2027 activation by February.</b></td><td class="mono">Feb 2027</td></tr>
-   <tr><td><strong>September</strong></td><td>Back-to-routine · National Coffee Day</td><td>The morning-ritual reset. Second-strongest new-habit moment after January.</td><td class="mono">Jul 2027</td></tr>
-   <tr><td><strong>November</strong></td><td>BFCM · Gratitude season</td><td>Commerce peak, run earlier than 2026.</td><td class="mono">Aug 2027</td></tr>
-   <tr><td><strong>December</strong></td><td>Gifting · <b>Kwanzaa</b> · The reset week</td><td>Kwanzaa's principles map onto the brand almost line for line — a seven-day series writes itself.</td><td class="mono">Oct 2027</td></tr>
-  </table></div>
- </div>
-
- <div class="sec">
-  <h4>Brand-owned dates — the ones we make up</h4>
-  <p>Borrowed holidays put us in a crowd. These are ours, they recur, and over two or three years they become things the audience expects.</p>
-  <div class="tablewrap"><table>
-   <tr><th>Date</th><th>What it is</th></tr>
-   <tr class="hl"><td><strong>The First Hour</strong> <span class="mono">· first Monday monthly</span></td><td>A monthly reset ritual. Everyone posts their first hour. The signature recurring format and the easiest challenge to run.</td></tr>
-   <tr><td><strong>Supermind Breakfast Club</strong> <span class="mono">· monthly, rotating city</span></td><td>Keys' concept — a morning coffee meetup. Low cost, high content. Distributed version runs as a challenge.</td></tr>
-   <tr><td><strong>The Hike</strong> <span class="mono">· monthly</span></td><td>Already happening. Posted in Zion, filmed, the most on-brand asset we own.</td></tr>
-   <tr><td><strong>Founder's Desk</strong> <span class="mono">· twice monthly</span></td><td>Keys' recurring newsletter column. A serial the audience follows.</td></tr>
-   <tr><td><strong>Tranche Day</strong> <span class="mono">· week 2 monthly</span></td><td>Boxes packed on camera and shipped. Build-in-public content.</td></tr>
-   <tr><td><strong>The Leaderboard</strong> <span class="mono">· every Monday</span></td><td>Public, named, competitive. The rhythm that makes the program feel alive.</td></tr>
-  </table></div>
-  <p class="footnote"><b>Confirm every third-party date before committing budget</b> — event organisers move things and platform deal days shift year to year.</p>
- </div>
-</section>
-
-<!-- ============ PROMPTS ============ -->
-<section class="pane" data-pane="prompts" hidden>
- <div class="kicker">SM-AFF-10</div>
- <h2>Prompts and challenges.</h2>
- <div class="rule"></div>
- <p class="lede">Affiliates don't fail from lack of motivation. They fail because on a given Tuesday they don't know what to film. A weekly prompt, a monthly challenge and a quarterly campaign remove that permanently — and every one ships with AI reference frames so nobody has to guess at the format.</p>
- <div class="callout"><h4>The failure mode to watch</h4>
- <p>A prompt library is worthless if nobody delivers it. The mechanism is the Thursday call, and that call doesn't exist yet. <b>If it hasn't started by September 29, this tab is decoration.</b></p></div>
-
- <div class="sec">
-  <h4>Six challenges, ready to run</h4>
-  <div class="tablewrap"><table>
-   <tr><th>Challenge</th><th>Mechanic</th><th>Prize</th><th>Why it works</th></tr>
-   <tr class="hl"><td><strong>THE ARCHITECTURE</strong><br><span class="mono">#MySupermindScore</span></td><td>Score yourself 0–1.0 across the brand's own five markers — Focus, Recovery, Sleep, Movement, Creation. Post the card, name the one you're training.</td><td>Tier promotion + feature</td><td>Turns brand IP into a participatory format. Every post teaches our framework to a new audience. <b>Run this first.</b></td></tr>
-   <tr><td><strong>THE FIRST HOUR</strong><br><span class="mono">#SupermindFirstHour</span></td><td>Seven days, seven posts of your actual first hour. Consistency, not production value.</td><td>Product bundle + newsletter feature</td><td>Trains the daily posting habit that separates the top affiliate from everyone else.</td></tr>
-   <tr class="hl"><td><strong>THE TRADE</strong><br><span class="mono">#TheTradeUp</span></td><td>What you stopped drinking, and what you drink now. No shaming, no claims — just the swap.</td><td>Early access to the next drop</td><td>Opens the sober-curious lane nobody has claimed. Lands hardest in January.</td></tr>
-   <tr><td><strong>THE RECIPE LAB</strong><br><span class="mono">#SupermindRecipes</span></td><td>Best original recipe with the coffee or chocolate.</td><td>Recipe produced by our crew</td><td>Recipes are what our own subscribers ask each other for most.</td></tr>
-   <tr><td><strong>BREAKFAST CLUB</strong><br><span class="mono">#SupermindBreakfastClub</span></td><td>Host three or more people for a morning coffee. Film the room.</td><td>Collab pack for their next one</td><td>Turns Keys' concept into distributed UGC before we produce a single official event.</td></tr>
-   <tr class="hl"><td><strong>FOREVER YOUNG</strong><br><span class="mono">#ForeverYoungRitual</span></td><td>Built for the collagen launch: the longevity ritual, filmed. Women-led by design.</td><td>First access + campaign casting</td><td>The lever on the audience split. Launch <b>with</b> the product, not after.</td></tr>
-  </table></div>
-  <div class="goldbox"><h4>Prizes are never cash for posting</h4>
-  <p>The commission is the money; the prize is the status. Tier promotions, product, early access, a newsletter feature, a produced session with our crew, a collab pack — and at the top, a golden ticket or 20 minutes with Keys. <b>Judged on brand fit and craft, not follower count</b> — a 900-follower entry can win, and when one does, say so loudly.</p></div>
- </div>
-
- <div class="sec">
-  <h4>Prompts written for the audience we're chasing</h4>
-  <div class="tablewrap"><table>
-   <tr><th>Lane</th><th>Prompt</th><th>Why it fits her page</th></tr>
-   <tr class="hl"><td><strong>Get ready with me</strong></td><td><b>"The cup in the corner."</b> Her normal GRWM, with the coffee genuinely in it — not held up to camera, just present the way it actually is.</td><td>The single most natural placement a coffee brand has. No format change required at all.</td></tr>
-   <tr><td><strong>Soft life</strong></td><td><b>"Slow morning, no rush."</b> The unhurried version — light, sound, the pour, nothing being sold.</td><td>Aspiration without effort. Highest save rate in the lane.</td></tr>
-   <tr><td><strong>Business &amp; ambition</strong></td><td><b>"What the first hour of a working day looks like."</b></td><td>Productivity is the category's growth edge and nobody in coffee is in this lane.</td></tr>
-   <tr><td><strong>Food &amp; recipe</strong></td><td><b>"Make it the way you'd make it for someone you like."</b></td><td>Coffee and baking is the most effortless pairing available, at the best engagement rates we found.</td></tr>
-   <tr><td><strong>Wellness</strong></td><td><b>"One thing you do for your brain."</b></td><td>Cognitive positioning from someone with credibility, without a claims problem.</td></tr>
-   <tr><td><strong>Fitness</strong></td><td><b>"Before, during, after."</b> Creatine before, coffee after.</td><td>Product inside real discipline. Two SKUs in one post.</td></tr>
-   <tr><td><strong>Motherhood</strong></td><td><b>"The ten minutes that are mine."</b></td><td>Universally recognised, deeply felt, and the product belongs there honestly.</td></tr>
-  </table></div>
- </div>
-
- <div class="sec">
-  <h4>The weekly library, by visual mode</h4>
-  <div class="two">
-   <div>
-    <h4>Analog Archive</h4>
-    <div class="tablewrap"><table style="min-width:0">
-     <tr><th>Prompt</th><th>Why it converts</th></tr>
-     <tr><td><strong>The First Hour</strong> — their real first hour, unglamorous</td><td>The purest expression of the brand. Nobody sells anything; the ritual sells it.</td></tr>
-     <tr><td><strong>Protect Your Attention</strong> — coffee, a timer, one task, no phone</td><td>Turns the brand's own line into a demonstration instead of a slogan.</td></tr>
-     <tr><td><strong>The Table</strong> — three or four people, a real conversation</td><td>Community made visible. The club framing without saying "club."</td></tr>
-     <tr><td><strong>What I'm Reading</strong> — the cup beside the book</td><td>Composed intelligence as status — the whole thesis in fifteen seconds.</td></tr>
-     <tr><td><strong>The Setup</strong> — where the cup actually lives</td><td>Aspirational without posing. Very high save-and-share rate.</td></tr>
-    </table></div>
-    <h4 style="margin-top:26px">Ritual in Motion</h4>
-    <div class="tablewrap"><table style="min-width:0">
-     <tr><th>Prompt</th><th>Why it converts</th></tr>
-     <tr><td><strong>Before the Session</strong> — then straight into the work</td><td>Product inside the action, never interrupting it.</td></tr>
-     <tr><td><strong>The Trade</strong> — what it replaced</td><td>The most under-used story in the category.</td></tr>
-     <tr><td><strong>Sunrise Miles</strong> — out the door before the sun</td><td>Made for the run-club and hiking partnerships we're opening.</td></tr>
-     <tr><td><strong>Recovery Is Training</strong> — the evening version</td><td>Reaches the longevity audience, gives the brand a second daypart.</td></tr>
-    </table></div>
-   </div>
-   <div>
-    <h4>Luxury Laboratory</h4>
-    <div class="tablewrap"><table style="min-width:0">
-     <tr><th>Prompt</th><th>Why it converts</th></tr>
-     <tr><td><strong>The Unboxing, Slowed Down</strong> — real sound, no music for three seconds</td><td>Sensory content is the highest-performing product format — and the new box is designed for exactly this frame.</td></tr>
-     <tr><td><strong>What's Actually In It</strong> — ingredients read aloud</td><td>Education beats pitching, and it's the safest territory.</td></tr>
-     <tr><td><strong>The Pour</strong> — one shot, hard side light, no talking</td><td>Endlessly repostable, works as a paid asset later.</td></tr>
-     <tr><td><strong>Gold, Silver, Oxblood</strong> — which vessel today, and why</td><td>Turns the vessel system into a personality quiz. Enormous comment driver.</td></tr>
-    </table></div>
-    <h4 style="margin-top:26px">Living Intelligence</h4>
-    <div class="tablewrap"><table style="min-width:0">
-     <tr><th>Prompt</th><th>Why it converts</th></tr>
-     <tr><td><strong>The Recipe</strong> — what they actually make with it</td><td>The highest-value UGC we can request, and it costs nothing.</td></tr>
-     <tr><td><strong>Where It Comes From</strong> — one ingredient, explained plainly</td><td>Curiosity converts. Positions the brand as a house, not a product.</td></tr>
-     <tr><td><strong>Plants and Paper</strong> — the cup in a green room</td><td>Distinctive against a category that shoots everything on white marble.</td></tr>
-    </table></div>
-   </div>
-  </div>
- </div>
-</section>
-
-<!-- ============ TEAM ============ -->
-<section class="pane" data-pane="team" hidden>
- <div class="kicker">SM-AFF-01 + SM-AFF-03</div>
- <h2>Team and operations.</h2>
- <div class="rule"></div>
- <div class="two">
-  <div>
-   <h4>Who does what</h4>
-   <div class="tablewrap"><table style="min-width:0">
-    <tr><th>Person</th><th>Role</th></tr>
-    <tr><td><strong>B. Amechi</strong></td><td>Owns the P&amp;L. Strategy, target list, the Keys relationship, top-tier outreach, media plan, the application funnel, <b>product photography and video</b>, membership card and box design, docu-profiles.</td></tr>
-    <tr class="hl"><td><strong>Celina</strong></td><td>Affiliate Coordinator — 8 hrs/week including a daily 10-minute check and the Thursday call. Applications, onboarding, tracking, payouts, fulfillment, follow-up.</td></tr>
-    <tr><td><strong>Keys</strong></td><td>Founder voice. Newsletter topics and voice, monthly on-camera packing session, tranche approvals, T3 sign-off, <b>the male lane and workout collaborations</b>, home content set.</td></tr>
-    <tr><td><strong>Mariah</strong></td><td>Inventory, budget release and reimbursements, print sourcing, events, PR, the Goldwater track.</td></tr>
-    <tr><td><strong>Pam</strong></td><td>KPI deck, weekly reporting, newsletter build and scheduling, subscriber email campaign.</td></tr>
-    <tr><td><strong>Steve</strong></td><td>IG content plan two weeks ahead, the Keys-led rotation, daily creator repost, ManyChat flows. <b>Not product assets.</b></td></tr>
-    <tr><td><strong>Antoine</strong></td><td>Zion — events in, notifications out, the Supermind presence.</td></tr>
-    <tr><td><strong>Sakara</strong></td><td>Board voice. PR push, budget discipline, metric challenge.</td></tr>
-   </table></div>
-  </div>
-  <div>
-   <h4>The eight coordinator hours</h4>
-   <div class="tablewrap"><table style="min-width:0">
-    <tr><th>When</th><th>Time</th><th>What</th></tr>
-    <tr class="hl"><td><strong>Daily</strong></td><td class="mono">10 min</td><td><b>The micro-check.</b> AM: new applications, issue codes, send welcomes. PM: creator inbox, DMs, log the day.</td></tr>
-    <tr><td><strong>Mon</strong></td><td class="mono">60 min</td><td>KPI sheet, scoreboard, payouts, leaderboard, monthly tier review</td></tr>
-    <tr><td><strong>Tue/Wed</strong></td><td class="mono">90 min</td><td>Deep-work block with Amechi</td></tr>
-    <tr><td><strong>Wed</strong></td><td class="mono">90 min</td><td>Platform ops — samples, invites, tracking</td></tr>
-    <tr class="hl"><td><strong>Thu</strong></td><td class="mono">45 min</td><td><b>Affiliate Connect call</b> — 15 prep, 30 live</td></tr>
-    <tr><td><strong>Thu</strong></td><td class="mono">60 min</td><td>Fulfillment — boxes, packs, cards, follow-ups</td></tr>
-    <tr><td><strong>Fri</strong></td><td class="mono">45 min</td><td>Weekly one-pager</td></tr>
-    <tr><td><strong>Buffer</strong></td><td class="mono">40 min</td><td>Overflow and escalations</td></tr>
-   </table></div>
-   <p class="footnote">Anything unfinished at eight hours goes in the report under "carried over" — never silently absorbed. That log is the evidence the program has outgrown the allocation and it's how the board learns to fund more.</p>
-  </div>
- </div>
-
- <div class="sec">
-  <h4>Why daily instead of weekly</h4>
-  <div class="callout"><p>An affiliate who applies Monday and hears nothing until Friday has already lost interest. <b>Ten minutes a day is the difference between a funnel and a backlog</b> — and it's only fifty minutes a week.</p></div>
- </div>
-
- <div class="sec">
-  <h4>The Thursday Affiliate Connect call</h4>
-  <div class="two">
-   <div>
-    <p>30 minutes, hosted in WHOP, recorded and posted within 24 hours. Fixed running order so it never needs planning:</p>
-    <ol class="steps">
-     <li><b>Wins and leaderboard (5 min)</b> — top three by name, first payouts, tier promotions.</li>
-     <li><b>One product story (5 min)</b> — so affiliates speak accurately without a script.</li>
-     <li><b>The format of the week (10 min)</b> — one thing converting now, with a real example.</li>
-     <li><b>Open floor (10 min)</b> — questions, page reviews.</li>
-    </ol>
-    <p><b>Before closing:</b> ask one affiliate for their story. That's the newsletter's Network slot, due weekly.</p>
-   </div>
-   <div>
-    <h4>Reporting</h4>
-    <div class="tablewrap"><table style="min-width:0">
-     <tr><th>When</th><th>What</th><th>Who</th></tr>
-     <tr><td>Monday</td><td>Scoreboard line, fixed format</td><td>Celina preps · Amechi publishes</td></tr>
-     <tr><td>Friday</td><td>Weekly one-pager</td><td>Celina</td></tr>
-     <tr><td>First Tuesday</td><td>KPI deck and board line</td><td>Pam · Amechi</td></tr>
-    </table></div>
-    <h4 style="margin-top:22px">Escalate same-day</h4>
-    <ul class="clean">
-     <li>Any gummies or CBD reference on TikTok</li>
-     <li>A post making a treatment claim</li>
-     <li>TikTok account-health warnings</li>
-     <li>Stock-out risk on anything committed</li>
-     <li>A creator with real traction waiting over 24 hours</li>
-     <li>An affiliate whose tracking looks like it's under-recording</li>
-    </ul>
-   </div>
-  </div>
- </div>
-
- <div class="sec">
-  <h4>Budget and scoreboard</h4>
-  <div class="two">
-   <div>
-    <div class="tablewrap"><table style="min-width:0">
-     <tr><th>September media plan</th><th>Amount</th></tr>
-     <tr><td>Gift-box tranche 1 — 15 boxes, women-first</td><td class="mono">$600</td></tr>
-     <tr><td>Kid Media campaign — 25 reels</td><td class="mono">$300</td></tr>
-     <tr><td>Event collab packs × 3</td><td class="mono">$600</td></tr>
-     <tr><td>TikTok sample seeding</td><td class="mono">$300</td></tr>
-     <tr><td>Subscriber seeding — top 10</td><td class="mono">$200</td></tr>
-     <tr><td>Card + box design and first print run</td><td class="mono">$250</td></tr>
-     <tr><td>ManyChat + tooling (reimbursed)</td><td class="mono">$100</td></tr>
-     <tr><td>Payout float + contingency</td><td class="mono">$150</td></tr>
-     <tr class="hl"><td><strong>Total</strong></td><td class="mono"><strong>$2,500</strong></td></tr>
-    </table></div>
-   </div>
-   <div>
-    <div class="tablewrap"><table style="min-width:0">
-     <tr><th>Metric</th><th>Aug</th><th>Oct 1</th><th>Nov 1</th><th>Dec 1</th></tr>
-     <tr class="hl"><td><strong>Affiliates enrolled</strong></td><td class="mono">23</td><td class="mono">75</td><td class="mono">150</td><td class="mono">250</td></tr>
-     <tr><td>Actively posting</td><td class="mono">~8</td><td class="mono">25</td><td class="mono">45</td><td class="mono">70</td></tr>
-     <tr class="hl"><td><strong>Affiliate revenue / mo</strong></td><td class="mono">$1,748</td><td class="mono">$2,500</td><td class="mono">$4,000</td><td class="mono">$6,500</td></tr>
-     <tr><td>Subscribers</td><td class="mono">163</td><td class="mono">200</td><td class="mono">250</td><td class="mono">300</td></tr>
-     <tr><td>TikTok GMV / mo</td><td class="mono">—</td><td class="mono">live</td><td class="mono">$1,500</td><td class="mono">$3,000</td></tr>
-     <tr><td><strong>Website sessions / mo</strong></td><td class="mono">428</td><td class="mono">1,500</td><td class="mono">3,000</td><td class="mono">5,000</td></tr>
-     <tr><td>Women share of IG</td><td class="mono">40%</td><td class="mono">45%</td><td class="mono">50%</td><td class="mono">55%</td></tr>
-    </table></div>
-    <p class="footnote">Enrollment targets jump because the constraint was never demand — it was the absence of a signup path.</p>
-   </div>
-  </div>
- </div>
-</section>
-
-<!-- ============ DOCS ============ -->
-<section class="pane" data-pane="docs" hidden>
- <div class="kicker">The document system</div>
- <h2>Download everything.</h2>
- <div class="rule"></div>
- <p class="lede">Eleven documents. The tabs on this site are the summary — these PDFs are the detail your role actually runs on. <b>Download the ones that touch your work and read them before we meet.</b></p>
- <div class="callout"><p><b>Read all of it, then we assign.</b> Go through every tab properly and download the documents. When we meet we'll walk the to-do list together, put a name against each item, and start executing immediately.</p></div>
-
- <div style="margin:26px 0 10px"><button class="dl-all" id="dlAll">Download all 11 documents</button> <span class="dl-note" id="dlNote"></span></div>
-
- <div class="docgrid">
-  <div class="doccard"><span class="code">SM-AFF-00</span><strong>Source of Truth</strong><p>The two engines, August actuals, the audience, the tier ladder, the funnel, budget and flags.</p><button class="dl" data-f="00-source-of-truth.pdf">Download PDF</button></div>
-  <div class="doccard"><span class="code">SM-AFF-01</span><strong>Internal Team Plan</strong><p>Objectives, content engine, meetings, RACI, adjacent tracks.</p><button class="dl" data-f="01-team-plan.pdf">Download PDF</button></div>
-  <div class="doccard"><span class="code">SM-AFF-02</span><strong>Affiliate Handbook</strong><p>For affiliates: pay, the four asks, the claims word bank, who we're marketing to, housekeeping.</p><button class="dl" data-f="02-affiliate-handbook.pdf">Download PDF</button></div>
-  <div class="doccard"><span class="code">SM-AFF-03</span><strong>Coordinator SOP</strong><p>The daily 10 minutes, the Thursday call, the ten funnel emails, the tracking sheet.</p><button class="dl" data-f="03-coordinator-sop.pdf">Download PDF</button></div>
-  <div class="doccard"><span class="code">SM-AFF-04</span><strong>Platform Playbook</strong><p>TikTok, Shopify, WHOP and Zion in one document — compared, configured, costed.</p><button class="dl" data-f="04-platform-playbook.pdf">Download PDF</button></div>
-  <div class="doccard"><span class="code">SM-AFF-05</span><strong>Creator Collaborations</strong><p>Gift box and card specs, collab packs, and the working target list.</p><button class="dl" data-f="05-creator-collabs.pdf">Download PDF</button></div>
-  <div class="doccard"><span class="code">SM-AFF-06</span><strong>Newsletter Guide</strong><p>Six pillars, the four-source voice, the structural template, the Claude project instructions.</p><button class="dl" data-f="06-newsletter-guide.pdf">Download PDF</button></div>
-  <div class="doccard"><span class="code">SM-AFF-07</span><strong>AI UGC Guide</strong><p>The reference library, the production system, and the two-track governance decision.</p><button class="dl" data-f="07-ai-ugc-guide.pdf">Download PDF</button></div>
-  <div class="doccard"><span class="code">SM-AFF-08</span><strong>Master To-Do</strong><p>Eighty-two tasks with owners and dates, from ManyChat to the October definition of done.</p><button class="dl" data-f="08-master-todo.pdf">Download PDF</button></div>
-  <div class="doccard"><span class="code">SM-AFF-09</span><strong>The Calendar</strong><p>Recurring rhythm, Q4 2026, the 2027 annual calendar, and our own brand-owned dates.</p><button class="dl" data-f="09-calendar.pdf">Download PDF</button></div>
-  <div class="doccard"><span class="code">SM-AFF-10</span><strong>Prompts &amp; Challenges</strong><p>Six challenges, the prompt library by visual mode, and prompts for the lanes we're chasing.</p><button class="dl" data-f="10-prompts-library.pdf">Download PDF</button></div>
- </div>
-
- <div class="sec">
-  <h4>Sources</h4>
-  <p class="footnote">SUPERMIND Growth Initiative call, September 1, 2026 (full transcript) · B. Amechi direction, September 2026 · SUPERMIND World Bible Edition 02 · SUPERMIND AI Prompt Guideline v1 · Newsletter workflow adapted from Moodboard / Ryan Carr, "Use Claude to write great newsletters (fast)" · Voice references: Anima Mundi Herbals, David Protein "The Column", Chamberlain Coffee "Inspiration" · Creator and partnership research September 2026: EYL / Invest Fest (Black Enterprise, AJC, HypeAuditor), High Level Conversations (Apple Podcasts, Rephonic), Vic Mensa (TheGrio, Webby Awards), Sensori (AfroTech, MadameNoire), Flau'jae Johnson (LSU Athletics, On3, Bustle), BIA (Boston Globe, Apple Music), GirlTrek, Sober Black Girls Club · Pricing: Influencer Marketing Hub, ContentGrip · TikTok Seller University · Shopify Help · WHOP Docs · FTC Endorsement Guides, 2023 revision.</p>
- </div>
-</section>
-
+  <section class="block alt faq" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Questions people actually ask.</h2>
+        <p>Not here? Ask in Help at whop.com/supermind. Straight questions are answered within one business day.</p>
+      </div>
+      <details><summary>Does it cost anything to join?</summary><p>No fee, no minimum purchase, and no requirement to buy anything.</p></details>
+      <details><summary>Do I need a big following?</summary><p>No. Somebody with 4,000 followers who posts every week usually outsells somebody with 200,000 who posts twice a year. TikTok Shop has its own 1,000-follower minimum; the website code and link have none.</p></details>
+      <details><summary>Can I pick my own code, and can I change it later?</summary><p>You choose it in Start Here, Module 02. If it is taken we will ask for a second choice. Codes are permanent, because changing one would break every post you have already published.</p></details>
+      <details><summary>Somebody bought without my code. Do I get credit?</summary><p>Yes, if they clicked your link within the previous 30 days.</p></details>
+      <details><summary>Why is a sale missing?</summary><p>Almost always one of three things: the customer used a different discount code, the sale happened on the other platform, or the report covers different dates. Send the date, the platform and roughly the order value in Help.</p></details>
+      <details><summary>How do I know when I have been promoted?</summary><p>You get an email. We check weekly, your code stays the same, and the rate behind it rises.</p></details>
+      <details><summary>Do I earn on my own orders?</summary><p>Yes.</p></details>
+      <details><summary>What does it taste like?</summary><p>Like coffee. Smooth and roasted, with no earthy or mushroom-forward finish.</p></details>
+      <details><summary>Will it make people jittery?</summary><p>The arabica gives the lift and the L-Theanine supports calm focus alongside it. Most people find it smoother than regular coffee. Describe your own experience rather than promising theirs.</p></details>
+      <details><summary>Can I use AI to make content?</summary><p>Yes. Put #ai in the caption on any AI-generated visual. That is the whole requirement.</p></details>
+      <details><summary>Can I run ads or host an event with Supermind?</summary><p>Paid ads with your code need written permission first. Events and wholesale are welcome conversations. Ask in Help for both.</p></details>
+      <details><summary>Can I use the brand's photos and logo?</summary><p>Everything in The Vault and the Brand Kit is pre-approved for posts and web. Anything printed or made, such as merch or signage, needs a yes in Help first.</p></details>
+    </div>
+  </section>
 </main>
+</div>
+
+<div id="teamView" aria-live="polite"></div>
+
 <footer>
- <span>SUPERMIND × HIGH LVL MEDIA · CREATOR NETWORK v5.0</span>
- <span>Owner: B. Amechi · September 2026 · Internal</span>
+  <div class="wrap">
+    <div>
+      <img src="brand/web/SUPERMIND_Wordmark_SignalWhite_640w.png" alt="SUPERMIND">
+      <p style="margin:0;max-width:340px">The Supermind Creator Network. Intelligence should feel alive.</p>
+    </div>
+    <ul>
+      <li><a href="https://whop.com/supermind" target="_blank" rel="noopener">Whop · whop.com/supermind</a></li>
+      <li><a href="https://ziion.io" target="_blank" rel="noopener">Ziion · ziion.io</a></li>
+      <li><a href="https://asupermind.com" target="_blank" rel="noopener">Store · asupermind.com</a></li>
+    </ul>
+    <ul>
+      <li><a href="https://instagram.com/supermindlab" target="_blank" rel="noopener">Instagram · @supermindlab</a></li>
+      <li><a href="https://www.tiktok.com/@supermindlab" target="_blank" rel="noopener">TikTok · @supermindlab</a></li>
+      <li><button class="team-btn" type="button" id="teamOpen2">Team access</button></li>
+    </ul>
+    <div class="fine">Supermind is a food product. Statements from affiliates describe personal experience and are not medical claims. Affiliates earn a commission on qualifying sales. © 2026 Supermind.</div>
+  </div>
 </footer>
 
-<script src="docs-payload.js"></script>
-<script>
-(function(){
- var tabs=document.getElementById('tabs');
- var btns=[].slice.call(tabs.querySelectorAll('button'));
- var panes=[].slice.call(document.querySelectorAll('.pane'));
- function show(id){
-  btns.forEach(function(b){b.classList.toggle('on',b.dataset.t===id)});
-  panes.forEach(function(p){p.hidden=(p.dataset.pane!==id)});
-  window.scrollTo({top:0});
- }
- tabs.addEventListener('click',function(e){
-  var b=e.target.closest('button');if(b)show(b.dataset.t);
- });
- document.addEventListener('keydown',function(e){
-  if(e.key!=='ArrowRight'&&e.key!=='ArrowLeft')return;
-  if(/input|textarea/i.test(document.activeElement.tagName))return;
-  var i=btns.findIndex(function(b){return b.classList.contains('on')});
-  var n=e.key==='ArrowRight'?Math.min(i+1,btns.length-1):Math.max(i-1,0);
-  show(btns[n].dataset.t);btns[n].scrollIntoView({block:'nearest',inline:'center'});
- });
-})();
+<div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gateTitle">
+  <form id="gateForm" autocomplete="off">
+    <h2 id="gateTitle">Team access</h2>
+    <p>SOPs, builds and working files for the Supermind team. Enter the team passcode.</p>
+    <label for="pass">Passcode</label>
+    <input id="pass" name="pass" type="password" autocomplete="current-password" required>
+    <div class="err" id="gateErr"></div>
+    <div class="row">
+      <button class="btn btn-cherry" type="submit" id="gateGo">Open team area</button>
+      <button class="btn" type="button" id="gateCancel" style="border-color:#bfb5a6;background:none;color:var(--bean)">Cancel</button>
+    </div>
+  </form>
+</div>
 
-/* Downloads: uses the artifact downloads capability when available,
-   falls back to a normal blob download on a regular web host. */
+<script>
+const PAYLOAD = "tlN4YhsD1YCUgMmZOBmdQQ==.B7guKyLWbdxIJYcA.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";
 (function(){
- var api=null, ready=false;
- function b64ToBlob(b64){
-  var bin=atob(b64), len=bin.length, arr=new Uint8Array(len);
-  for(var i=0;i<len;i++)arr[i]=bin.charCodeAt(i);
-  return new Blob([arr],{type:'application/pdf'});
- }
- function note(msg){
-  var n=document.getElementById('dlNote');
-  if(n){n.textContent=msg; if(msg) setTimeout(function(){if(n.textContent===msg)n.textContent='';},5000);}
- }
- function fallback(name,b64){
-  try{
-   var url=URL.createObjectURL(b64ToBlob(b64));
-   var a=document.createElement('a');
-   a.href=url; a.download=name; document.body.appendChild(a); a.click();
-   document.body.removeChild(a); setTimeout(function(){URL.revokeObjectURL(url);},1000);
-   return true;
-  }catch(e){return false;}
- }
- function grab(name){
-  var b64=(window.SM_DOCS||{})[name];
-  if(!b64){note('That file is not bundled in this copy.');return Promise.resolve();}
-  if(api){
-   return api.save({filename:name,data:b64ToBlob(b64)})
-     .catch(function(){ if(!fallback(name,b64)) note('Download was declined or blocked.'); });
+  const gate=document.getElementById('gate'), form=document.getElementById('gateForm'),
+        pass=document.getElementById('pass'), err=document.getElementById('gateErr'),
+        view=document.getElementById('teamView');
+  const b64=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
+  async function unlock(pw){
+    const [salt,iv,ct]=PAYLOAD.split('.').map(b64);
+    const base=await crypto.subtle.importKey('raw',new TextEncoder().encode(pw),'PBKDF2',false,['deriveKey']);
+    const key=await crypto.subtle.deriveKey({name:'PBKDF2',salt,iterations:250000,hash:'SHA-256'},base,{name:'AES-GCM',length:256},false,['decrypt']);
+    const pt=await crypto.subtle.decrypt({name:'AES-GCM',iv},key,ct);
+    return new TextDecoder().decode(pt);
   }
-  if(!fallback(name,b64)) note('Your browser blocked the download.');
-  return Promise.resolve();
- }
- document.addEventListener('click',function(e){
-  var b=e.target.closest('button.dl');
-  if(b){ e.preventDefault(); grab(b.dataset.f); return; }
-  var all=e.target.closest('#dlAll');
-  if(all){
-   e.preventDefault();
-   var names=Object.keys(window.SM_DOCS||{});
-   if(!names.length){note('Documents are not bundled in this copy.');return;}
-   note('Saving '+names.length+' files…');
-   var i=0;
-   (function next(){
-     if(i>=names.length){note('Done.');return;}
-     grab(names[i++]).then(function(){setTimeout(next,450);});
-   })();
+  function openGate(){gate.classList.add('open');err.textContent='';pass.value='';setTimeout(()=>pass.focus(),30)}
+  function closeGate(){gate.classList.remove('open')}
+  async function show(html,pw){
+    view.innerHTML=html;document.body.classList.add('team-on');closeGate();
+    try{sessionStorage.setItem('smTeam',pw)}catch(e){}
+    if(location.hash!=='#team')history.replaceState(null,'','#team');
+    window.scrollTo(0,0);
+    view.querySelectorAll('[data-exit]').forEach(b=>b.addEventListener('click',exitTeam));
+    view.querySelectorAll('a.row[data-file]').forEach(async a=>{
+      const st=a.querySelector('.st');
+      try{const r=await fetch(a.getAttribute('href'),{method:'HEAD',cache:'no-store'});
+        if(r.ok){st.textContent='Download'}else{st.textContent='Not uploaded yet';st.classList.add('miss')}}
+      catch(e){st.textContent='Download'}
+    });
   }
- });
- if(window.claude&&typeof window.claude.use==='function'){
-  window.claude.use('downloads').then(function(d){api=d;ready=true;}).catch(function(){ready=true;});
- }
+  function exitTeam(){document.body.classList.remove('team-on');view.innerHTML='';
+    try{sessionStorage.removeItem('smTeam')}catch(e){}
+    history.replaceState(null,'',location.pathname);window.scrollTo(0,0)}
+  form.addEventListener('submit',async e=>{
+    e.preventDefault();err.textContent='Checking…';
+    const pw=pass.value.trim().toLowerCase();
+    try{show(await unlock(pw),pw)}catch(x){err.textContent='That passcode did not open the team area. Check the spelling and try again.'}
+  });
+  document.getElementById('teamOpen').addEventListener('click',openGate);
+  document.getElementById('teamOpen2').addEventListener('click',openGate);
+  document.getElementById('gateCancel').addEventListener('click',closeGate);
+  gate.addEventListener('click',e=>{if(e.target===gate)closeGate()});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeGate()});
+  let saved=null;try{saved=sessionStorage.getItem('smTeam')}catch(e){}
+  if(saved){unlock(saved).then(h=>show(h,saved)).catch(()=>{})}
+  else if(location.hash==='#team'){openGate()}
 })();
 </script>
+</body>
+</html>
